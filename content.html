@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BDUBS</title>
+    <script src="script.js"></script>
+    <link href = "content.css" rel = "stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/markdown-it/dist/markdown-it.min.js"></script>
+  </head>
+<body>
+
+    <!-- <div id="loading-screen">
+        <div>
+        <p id="loading-message">Loading...</p>
+     </div>
+        <div class="loading-bar"></div>
+    </div> -->
+
+    <div class="shovelknight-container">
+        <img src="resources/shovelknight.gif" class="shovelknight">
+        <div class="speech-bubble">
+            <img src="resources/speechbubble.png" alt="Speech Bubble">
+            <p id="quote-text"></p>
+        </div>
+    </div>
+
+    <div id="readme-content"></div>
+
+    <div>
+        <img src="resources/bg.png" id="bg2">
+    </div>
+
+    <div class="menu-bar">
+        <ul class="menu-list">
+          <li class="menu-item">Inventory</li>
+          <li class="menu-item skills">Skills
+            <ul class="sub-menu">
+              <li class="sub-menu-item">Spell 1</li>
+              <li class="sub-menu-item">Spell 2</li>
+              <li class="sub-menu-item">Spell 3</li>
+            </ul>
+          </li>
+          <li class="menu-item quests">
+            <a href="#" id="load-readme">Quests</a>
+          </li>
+        </ul>
+        <input type="range" id="volume-slider" min="0" max="1" step="0.1" value="0.5">
+      </div>
+
+      <div id="chat-container">
+        <div id="chat-log"></div>
+        <div id="chat-input">
+          <input type="text" id="message-input" placeholder="/user to define a nickname...">
+          <button id="send-button">Send</button>
+        </div>
+      </div>
+
+    <audio id="bg-music" loop>
+        <source src="resources/LofiAttempt2NoGuitar.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio> 
+
+
+
+</body>
+</html>
