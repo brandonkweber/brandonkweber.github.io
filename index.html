@@ -1,19 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BDUBS</title>
-    <script src="script.js"></script>
-    <link href = "landingPage.css" rel = "stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bkweber.com</title>
+  <script src="script.js"></script>
+  <link href="index.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/markdown-it/dist/markdown-it.min.js"></script>
 </head>
+
 <body>
-    <div id="passwordForm">
-        <label class="retro-text" for="password">Enter the secret password:</label>
-        <input type="password" id="password" />
-        <button class="retro-button" onclick="checkPassword()">Submit</button>
+  <div id="container">
+    <div id="logo">
+        <h2 style="display:inline">Brandon HQ</h2>        
     </div>
-</div>
+    <table>
+      <tr>
+        <td id="lmenutd" style="max-width:225px">
+            <div class="box">
+                <h2 style="display:inline">Site Info</h2>
+            </div>
+            <div class="box">
+                <h2 style="display:inline">Site Options</h2>
+            </div>
+            <div class="box">
+                <h2 style="display:inline">Work To Do</h2>
+            </div>
+            <div class="box">
+                <h2 style="display:inline">Release Notes</h2>
+            </div>
+        </td>
+        <td id="maintd">
+            <div class="box">
+                <h2 style="display:inline">About Me</h2>
+            </div>
+            <div class="box">
+                <h2 style="display:inline">Projects</h2>
+            </div>
+            <div class="box">
+                <h2 style="display:inline">Blog</h2>
+            </div>
+            <div class="box">
+                <h2 style="display:inline">LiveChat</h2>
+            </div>
+        </td>
+        <td id="rmenutd" style="max-width:225px">
+            <div class="box">
+                <h2 style="display:inline">Services Provided</h2>
+            </div>
+            <div class="box">
+                <h2 style="display:inline">My Status</h2>
+            </div>
+            <div class="box">
+                <h2 style="display:inline">Find Me</h2>
+            </div>
+            <div class="box">
+                <h2 style="display:inline">Listen w/ Me</h2>
+            </div>
+            <div class="box">
+                <h2 style="display:inline">Pixel Art Weiners</h2>
+            </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <audio id="bg-music" loop>
+    <source src="resources/LofiAttempt2NoGuitar.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
+
 
 </body>
+
 </html>

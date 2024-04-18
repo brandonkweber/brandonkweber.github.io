@@ -1,0 +1,101 @@
+body, #debug {
+  image-rendering: pixelated;
+  font-family: russiangothic, ms ui gothic, nec_apc3, Tahoma;
+  background-color: #000;
+  text-shadow: var(--body-text-shadow);
+  font-smooth: never;
+  -webkit-font-smoothing: none;
+}
+
+#logo {
+  text-align: center;
+  padding-top: 5px;
+  animation: flickering .07s infinite;
+  margin-right: 50px;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  margin-top: 10px;
+  display: block;
+}
+
+table {
+  display: table;
+  border-collapse: separate;
+  box-sizing: border-box;
+  text-indent: initial;
+  unicode-bidi: isolate;
+  border-spacing: 2px;
+  border-color: gray;
+}
+
+tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  unicode-bidi: isolate;
+  border-color: inherit;
+}
+
+tr {
+  display: table-row;
+  vertical-align: inherit;
+  unicode-bidi: isolate;
+  border-color: inherit;
+}
+
+#maintd {
+  width: 675px;
+  vertical-align: baseline;
+}
+
+td {
+  display: table-cell;
+  vertical-align: inherit;
+  unicode-bidi: isolate;
+}
+
+.box {
+  background-color: #000000a8;
+  border: 2px solid #383838;
+  border-radius: 4px;
+  color: #fff;
+  padding: 10px 15px;
+  margin: 5px;
+}
+
+div {
+  display: block;
+  unicode-bidi: isolate;
+}
+
+#container, #backside-container {
+  width: 900px;
+  margin: 0 auto;
+}
+
+h2 {
+  color: #f07828;
+  font-family: right grotesk;
+  margin: 0;
+  text-shadow: var(--green-text-shadow);
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  unicode-bidi: isolate;
+}
+
+:root {
+  --body-text-shadow: 0 0 20px #ffffff4a, 0 0 20px #00ffab45;
+  --green-text-shadow: 0 0 20px #08bd9882;
+  --letter-shadow: drop-shadow(0 0 0.75rem rgba(20, 220, 187, 0.35));
+  --firefox-body-shadow: 0 0 20px #ffffff31, 0 0 20px #00ffab45;
+  --firefox-green-shadow: 0 0 20px #08bd994f;
+}
