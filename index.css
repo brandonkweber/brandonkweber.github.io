@@ -99,3 +99,12 @@ h2 {
   --firefox-body-shadow: 0 0 20px #ffffff31, 0 0 20px #00ffab45;
   --firefox-green-shadow: 0 0 20px #08bd994f;
 }
+
+#bg {
+  z-index: -999;
+  background-size: cover;
+  image-rendering: pixelated;
+  background-color: #000;
+  width: 100%;
+  position: absolute;
+}
