@@ -108,3 +108,11 @@ h2 {
   width: 100%;
   position: absolute;
 }
+
+footer {
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+  padding: 10px;
+  background-color: #333;
+}
