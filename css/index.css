@@ -116,3 +116,30 @@ footer {
   padding: 10px;
   background-color: #333;
 }
+
+/* Styling for the GIF */
+.fixed-gif {
+  position: fixed;
+  bottom: -7px;  /* Adjust the distance from the bottom */
+  right: 0px;   /* Adjust the distance from the right */
+  width: 100px;  /* Adjust the size of the GIF */
+  z-index: 1000; /* Ensure it's on top of other elements */
+}
+
+/* Styling for the GIF */
+.fixed-sign {
+  position: fixed;
+  bottom: 0px;  /* Adjust the distance from the bottom */
+  right: 35px;   /* Adjust the distance from the right */
+  width: 200px;  /* Adjust the size of the GIF */
+  z-index: 800; /* Ensure it's on top of other elements */
+}
+
+/* Styling for the GIF */
+.fixed-qr {
+  position: fixed;
+  bottom: 62px;  /* Adjust the distance from the bottom */
+  right: 99px;   /* Adjust the distance from the right */
+  width: 70px;  /* Adjust the size of the GIF */
+  z-index: 900; /* Ensure it's on top of other elements */
+}
