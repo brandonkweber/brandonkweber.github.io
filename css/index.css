@@ -68,7 +68,7 @@ h2 {
   z-index: -999;
   image-rendering: pixelated;
   background-color: #000;
-  width: 200%;
+  width: 400%;
   position: absolute;
 }
 
@@ -265,7 +265,7 @@ section {
 .header-img {
   width: 100%;
   height: 104px;
-  background-image: url(Banner-Placeholder.png);
+  /* background-image: url(Banner-Placeholder.png); */
   background-repeat: no-repeat;
   background-position: center;
   padding: 0px;
