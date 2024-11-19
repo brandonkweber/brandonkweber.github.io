@@ -344,6 +344,10 @@ li {
   unicode-bidi: isolate;
 }
 
+li:hover {
+  color: white;
+}
+
 .metrics {
   grid-column: 6 / 7;
   grid-row: 1 / 2;
