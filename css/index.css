@@ -1,0 +1,401 @@
+body, #debug {
+  image-rendering: pixelated;
+  color: GreenYellow;
+  font-family: 'New Font';
+  text-rendering: optimizeLegibility;
+}
+
+#logo {
+  text-align: center;
+  padding-top: 5px;
+  animation: flickering .07s infinite;
+  margin-right: 50px;
+}
+
+body {
+  image-rendering: pixelated;
+  background-position: center, center top, center bottom, center top;
+  background-repeat: no-repeat, repeat-x, repeat-x, repeat;
+  width: 100%;
+  min-width: fit-content;
+  min-height: 100%;
+  color: GreenYellow;
+  font-family: 'New Font';
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: none;
+  font-smooth: none;
+  overflow-x: hidden;
+}
+
+
+div {
+  display: block;
+  unicode-bidi: isolate;
+}
+
+#container, #backside-container {
+  width: 900px;
+  margin: 0 auto;
+}
+
+h2 {
+  color: #f07828;
+  font-family: right grotesk;
+  margin: 0;
+  text-shadow: var(--green-text-shadow);
+}
+
+h2 {
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  unicode-bidi: isolate;
+}
+
+:root {
+  --body-text-shadow: 0 0 20px #ffffff4a, 0 0 20px #00ffab45;
+  --green-text-shadow: 0 0 20px #08bd9882;
+  --letter-shadow: drop-shadow(0 0 0.75rem rgba(20, 220, 187, 0.35));
+  --firefox-body-shadow: 0 0 20px #ffffff31, 0 0 20px #00ffab45;
+  --firefox-green-shadow: 0 0 20px #08bd994f;
+}
+
+#bg {
+  z-index: -999;
+  background-size: cover;
+  image-rendering: pixelated;
+  background-color: #000;
+  width: 100%;
+  position: absolute;
+}
+
+footer {
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+  padding: 10px;
+  background-color: #333;
+}
+
+/* Styling for the GIF */
+.fixed-gif {
+  position: fixed;
+  bottom: -7px;  /* Adjust the distance from the bottom */
+  right: 0px;   /* Adjust the distance from the right */
+  width: 100px;  /* Adjust the size of the GIF */
+  z-index: 1000; /* Ensure it's on top of other elements */
+}
+
+/* Styling for the GIF */
+.fixed-sign {
+  position: fixed;
+  bottom: 0px;  /* Adjust the distance from the bottom */
+  right: 35px;   /* Adjust the distance from the right */
+  width: 200px;  /* Adjust the size of the GIF */
+  z-index: 800; /* Ensure it's on top of other elements */
+}
+
+/* Styling for the GIF */
+.fixed-qr {
+  position: fixed;
+  bottom: 62px;  /* Adjust the distance from the bottom */
+  right: 99px;   /* Adjust the distance from the right */
+  width: 70px;  /* Adjust the size of the GIF */
+  z-index: 900; /* Ensure it's on top of other elements */
+}
+
+.left-section, .right-section, .middle-section {
+  padding: 20px;
+}
+
+.left-section {
+  width: 20%;
+  background-color: #f0f0f0;
+}
+
+.middle-section {
+  width: 60%;
+  background-color: #ffffff;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+.right-section {
+  width: 20%;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  margin: 10px 0;
+  padding: 10px;
+  width: 100px;
+  cursor: pointer;
+}
+
+main {
+  display: block;
+  unicode-bidi: isolate;
+}
+
+.structure {
+  display: grid;
+  grid-template-columns: 240px 247px 43px 202px 147px 250px;
+  grid-template-rows: 230px 50px 75px 71px 100px 96px 76px 170px 50px 50px 100px 40px;
+  column-gap: 3px;
+  row-gap: 3px;
+  justify-content: center;
+  margin-top: 120px;
+  margin-bottom: 2%;
+}
+
+.tv-container {
+  background-color: #000;
+  box-shadow: inset  0 5px 5px rgba(0,0,0,.9);
+  overflow: hidden;
+}
+
+section {
+  grid-column: 3 / 6;
+  grid-row: 3 / 6;
+  box-shadow: inset 0 1px 12px rgb(255, 88, 66);
+  padding: 5px;
+  border: 2px solid orange;
+}
+
+.projects {
+  grid-column: 2 / 6;
+  grid-row: 6 / 9;
+  box-shadow: inset 0 1px 20px rgb(206, 81, 8);
+  padding: 5px;
+  margin-left: 47px;
+  border: 1px solid;
+  text-align: center;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url(isolated-holographic-gradient-wallpaper-7.jpg);
+}
+
+.blog {
+  grid-column: 2 / 6;
+  grid-row: 9 / 12;
+  box-shadow: inset 0 1px 20px rgb(206, 81, 8);
+  padding: 5px;
+  margin-left: 47px;
+  border: 1px solid;
+  text-align: center;
+}
+
+
+.offline-online {
+  grid-column: 2 / 3;
+  grid-row: 4 / 5;
+  box-shadow: inset 0 1px 20px rgb(206, 81, 8);
+  padding: 5px;
+  margin-left: 47px;
+  border: 1px solid;
+  text-align: center;
+}
+
+.soundtrack {
+  grid-column: 2 / 3;
+  grid-row: 5 / 6;
+  box-shadow: inset 0 1px 20px rgb(206, 81, 8);
+  padding: 5px;
+  margin-left: 47px;
+  border: 1px solid;
+  text-align: center;
+}
+
+.about-me {
+  grid-column: 2 / 6;
+  grid-row: 1 / 2;
+  box-shadow: inset 0 1px 20px rgb(206, 81, 8);
+  padding: 5px;
+  margin-left: 47px;
+  border: 1px solid;
+  text-align: left;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(414168-PE9IHN-966.jpg);
+  background-position: center;
+  font-size: 14px;
+  font-family: "Comic Sans MS", "Lato";
+}
+
+.my-avatar {
+  grid-column: 2 / 4;
+  grid-row: 1 / 2;
+  box-shadow: inset 0 1px 20px rgb(206, 81, 8);
+  padding: 5px;
+  margin-left: 47px;
+  border: 1px solid;
+  text-align: center;
+}
+
+.chat {
+  grid-column: 1 / 2;
+  grid-row: 7 / 12;
+  display: block;
+  color: rgb(255, 167, 66);
+  background-repeat: repeat;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url(isolated-holographic-gradient-wallpaper-7.jpg);
+  box-shadow: inset 0 1px 20px;
+  padding: 5px;
+  border: 1px dashed;
+  overflow: auto;
+}
+
+.services-provided {
+  grid-column: 6 / 7;
+  grid-row: 2 / 6;
+  color: rgb(80, 180, 66);
+  box-shadow: inset 0 1px 10px rgb(6, 103, 116);
+  padding: 5px;
+  margin-left: 47px;
+  border: 1px dashed rgb(73, 255, 185);
+  text-align: center;
+}
+
+.header-img {
+  width: 100%;
+  height: 104px;
+  background-image: url(Banner-Placeholder.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 0px;
+  margin-top: 0px;
+  margin-bottom: -20px;
+  position: relative;
+  z-index: 1;
+}
+
+h1 {
+  font-size: 2em;
+  margin-block-start: 0.67em;
+  margin-block-end: 0.67em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  unicode-bidi: isolate;
+  margin-left: 10px;
+}
+
+p {
+  margin-left: 10px;
+  margin-top: 10px;
+  width: 73%;
+  color: rgb(255, 183, 0);
+}
+
+
+main {
+  display: block;
+  unicode-bidi: isolate;
+}
+
+.right-transmit-panel {
+  grid-column: 6 / 7;
+  grid-row: 6 / 8;
+  color: rgb(255, 88, 66);
+  box-shadow: inset 0 1px 10px rgb(6, 103, 116);
+  padding: 5px;
+  margin-left: 47px;
+  border: 1px dashed rgb(73, 255, 185);
+  text-align: center;
+}
+
+.right-contacts-panel {
+  grid-column: 6 / 7;
+  grid-row: 8 / 9;
+  color: rgb(255, 88, 66);
+  box-shadow: inset 0 1px 10px rgb(6, 103, 116);
+  padding: 5px;
+  margin-left: 47px;
+  border: 1px dashed rgb(73, 255, 185);
+  text-align: center;
+}
+
+.shoutouts-panel {
+  grid-column: 6 / 7;
+  grid-row: 9 / 12;
+  color: rgb(80, 180, 66);
+  box-shadow: inset 0 1px 10px rgb(6, 103, 116);
+  padding: 5px;
+  margin-left: 47px;
+  border: 1px dashed rgb(73, 255, 185);
+  text-align: center;
+}
+
+
+li {
+  list-style-type: none;
+  text-align: -webkit-match-parent;
+  unicode-bidi: isolate;
+}
+
+.metrics {
+  grid-column: 6 / 7;
+  grid-row: 1 / 2;
+  color: rgb(73, 255, 185);
+  box-shadow: inset 0 1px 6px rgb(188, 243, 35);
+  font-family: 'Cubular Title', 'New Font';
+  padding: 5px;
+  margin-left: 47px;
+  border: 1px dotted;
+  text-align: center;
+}
+
+nav {
+  grid-column: 1 / 2;
+  grid-row: 1 / 4;
+  box-shadow: inset 0 1px 12px crimson;
+  padding-right: 5px;
+  padding-left: 3px;
+  border: 2px solid crimson;
+}
+
+nav h2 {
+  text-align: center;
+  margin-top: 35px;
+  color: rgb(210, 255, 47);
+}
+
+h2 {
+  font-family: 'Cubular Title', 'New Font';
+  color: rgb(73, 255, 185);
+  font-size: 36px;
+  text-shadow: 0 1px 0 midnightblue;
+  margin-top: 0;
+  margin-bottom: 5px;
+  word-spacing: 5px;
+}
+
+.changelog {
+  grid-column: 1 / 2;
+  grid-row: 4 / 7;
+  display: block;
+  color: rgb(255, 167, 66);
+  background-repeat: repeat;
+  box-shadow: inset 0 1px 20px;
+  padding: 5px;
+  border: 1px dashed;
+  overflow: auto;
+}
+
+footer {
+  grid-column: 1 / 7;
+  grid-row: 12 / 13;
+  box-shadow: inset 0 1px 4px rgb(6, 103, 116);
+  color: rgb(107, 201, 255);
+  text-shadow: 0 1px 0 rgb(6, 103, 116);
+  border: 1px dashed rgb(73, 255, 185);
+  text-align: center;
+}
