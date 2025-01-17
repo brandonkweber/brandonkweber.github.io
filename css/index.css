@@ -25,7 +25,7 @@ main {
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "RussianGothic", "MS UI Gothic", "NEC_APC3", Tahoma;
   background: url('Background GIF High Def.gif') no-repeat center center fixed; /* Add your background image */
   background-size: cover; /* Ensures the background image covers the entire container */
   height: 100vh; /* Matches the viewport height initially */
@@ -38,7 +38,7 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: minmax(0, 500px) minmax(0, 2000px) minmax(0, 500px); /* Max widths for left, main, and right boxes */
+  grid-template-columns: minmax(0, 300px) minmax(0, 2000px) minmax(0, 300px); /* Max widths for left, main, and right boxes */
   gap: 10px;
   max-width: calc(500px + 2000px + 40px); /* Combined max width of all columns + gaps */
   width: 100%; /* Ensures it shrinks on smaller screens */
@@ -58,7 +58,7 @@ body {
 }
 
 .main-box {
-  max-width: 2000px; /* Main box maximum width */
+  overflow: visible;
 }
 
 .right-box {
@@ -66,8 +66,35 @@ body {
 }
 
 .box {
-  border-radius: 4px;
+  border: 1px solid;
+  margin-bottom: 10px;
+  padding: 10px;
 }
+
+.profile-picture {
+  position: relative; /* Relative to the main-box */
+  float: right; /* Align to the right */
+  margin-left: 20px; /* Add spacing between the image and the content */
+  width: 286px;
+  height: 450px;
+  border: 5px solid transparent;
+  animation: flashing-border 1.5s infinite;
+  transform: translate(-10px, 10px); /* Shift left 10px and down 10px */
+}
+
+
+@keyframes flashing-border {
+  0% {
+      border-color: violet;
+  }
+  50% {
+      border-color: yellow;
+  }
+  100% {
+      border-color: blue;
+  }
+}
+
 
 @media screen and (max-width: 768px) {
   .container {
@@ -111,52 +138,12 @@ body {
   transition: transform 3s ease-in-out;
 }
 
-
-.projects {
-  grid-column: 2 / 6;
-  grid-row: 6 / 9;
-  box-shadow: inset 0 1px 20px rgb(206, 81, 8);
-  padding: 5px;
-  border: 1px solid;
-  text-align: center;
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25))
-}
-
-.about-me {
-  grid-column: 2 / 6;
-  grid-row: 1 / 2;
-  box-shadow: inset 0 1px 20px rgb(206, 81, 8);
-  border: 1px solid;
-  text-align: left;
-  background-position: center;
-  font-size: 14px;
-  font-family: "Comic Sans MS", "Lato";
-}
-
 .services-provided {
-  grid-column: 6 / 7;
-  grid-row: 2 / 6;
-  color: rgb(80, 180, 66);
-  box-shadow: inset 0 1px 10px rgb(6, 103, 116);
   padding: 5px;
-  border: 1px dashed rgb(73, 255, 185);
-  text-align: center;
-}
-
-img {
-  overflow-clip-margin: content-box;
-  overflow: clip;
 }
 
 .right-contacts-panel {
-  grid-column: 6 / 7;
-  grid-row: 8 / 9;
-  color: rgb(255, 88, 66);
-  box-shadow: inset 0 1px 10px rgb(6, 103, 116);
   padding: 5px;
-  border: 1px dashed rgb(73, 255, 185);
-  text-align: center;
 }
 
 .shoutouts-panel {
@@ -192,25 +179,25 @@ li:hover {
 }
 
 h2 {
-  font-family: 'Cubular Title', 'New Font';
-  color: rgb(73, 255, 185);
-  font-size: 36px;
-  text-shadow: 0 1px 0 midnightblue;
-  margin-top: 0;
-  margin-bottom: 5px;
-  word-spacing: 5px;
+  display: inline;
+  color: var(--link-color);
+  color: violet;
+  font-family: "Pixel NES";
+  margin: 0;
+  text-shadow: var(--green-text-shadow);
+  transition: 0.7s;
+  font-size: 2em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  unicode-bidi: isolate;
 }
 
+
 .changelog {
-  grid-column: 1 / 2;
-  grid-row: 4 / 7;
-  display: block;
-  color: rgb(255, 167, 66);
-  background-repeat: repeat;
-  box-shadow: inset 0 1px 20px;
   padding: 5px;
-  border: 1px dashed;
-  overflow: auto;
 }
 
 footer {
