@@ -38,7 +38,8 @@ body {
 
 .container {
   display: grid;
-  grid-template-columns: minmax(0, 300px) minmax(0, 2000px) minmax(0, 300px); /* Max widths for left, main, and right boxes */
+  justify-content: center;
+  grid-template-columns: minmax(0, 300px) minmax(0, 1000px) minmax(0, 300px); /* Max widths for left, main, and right boxes */
   gap: 10px;
   max-width: calc(500px + 2000px + 40px); /* Combined max width of all columns + gaps */
   width: 100%; /* Ensures it shrinks on smaller screens */
@@ -121,20 +122,13 @@ body {
       order: 2;
   }
 
-  .saucer {
-    width: 50px;
-    height: 50px;
-    bottom: 10px;
-    right: 10px;
-    transition: transform 3s ease-in-out;
-  }
 }
 
 .saucer {
   z-index: 1000;
   position: absolute; /* Ensure it can move freely */
-  width: 100px; /* Adjust size */
-  height: 100px; /* Adjust size */
+  width: 150px; /* Adjust size */
+  height: 150px; /* Adjust size */
   transition: transform 3s ease-in-out;
 }
 
