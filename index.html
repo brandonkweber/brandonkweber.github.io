@@ -7,17 +7,26 @@
   <title>bkweber.com</title>
   <script src="js/script.js"></script>
   <link href="css/index.css" rel="stylesheet">
-  <link href="css/sidemenu.css" rel="stylesheet">
   <link href="css/tv.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/markdown-it/dist/markdown-it.min.js"></script>
 </head>
 
+
 <body>
 
-    <main class = "foundation">
-        <div class="header-img"></div>
-    </main>
+    <div id="loading-screen" style="position: fixed; width: 100%; height: 100%; background: #000; color: #fff; display: flex; justify-content: center; align-items: center;">
+        <p>Loading... <br> Version 1.0.0</p>
+    </div>
+    
+    <script>
+        setTimeout(() => {
+            document.getElementById('loading-screen').style.display = 'none';
+            document.getElementById('profile-picture').style.display = 'block';
+        }, 1000); // Hides after 3 seconds
+    </script>
+    
+
     <div class="container">
         <img src="images/3d saucer.gif" class="saucer" id="saucer">
         <div class="left-box">
@@ -29,20 +38,43 @@
             <div class="box">
                 <div class = "changelog">
                     <h2 class="update">CHANGELOG</h2>
+                    <h3>Version 1.0.0</h3>
                     <ul>
                         <li>
-                            <p>
-                                <span>0.1.1</span>
-                                " - Lorem ipsum odor amet, consectetuer adipiscing elit. Molestie penatibus dolor pellentesque risus viverra accumsan parturient. Maecenas tortor efficitur metus eleifend lobortis facilisi. Lacinia dui suscipit natoque duis facilisis nostra cubilia aliquam. Tempus lacinia per ultrices, euismod mattis vestibulum. Justo lectus accumsan consequat cursus lacus quisque ultricies nascetur. Faucibus facilisi quis eget nec sagittis porta.
-    
-                                Luctus a morbi velit suscipit magna velit laoreet amet. Egestas iaculis rhoncus cubilia leo morbi neque consequat. Est euismod finibus suscipit diam tristique. Fames sit himenaeos et rhoncus scelerisque praesent at urna. Vulputate tempus vulputate mauris pretium platea aptent dui justo convallis. Egestas a laoreet ex fermentum tincidunt metus blandit.
-                                
-                                Eu quam class ullamcorper, euismod montes praesent. Augue lectus imperdiet netus; mollis etiam ipsum. Aliquet tempus venenatis cras fringilla lacinia dignissim vitae. Ornare accumsan fusce erat; cras elit senectus. Lacus nascetur sit imperdiet, mauris venenatis senectus urna dis. Adipiscing tortor aenean cursus adipiscing, euismod fermentum. Proin ornare mauris bibendum risus risus quisque lobortis. Metus congue curae commodo dictum ridiculus.
-                                
-                                Aclass est euismod sapien elit facilisi eleifend. Gravida ligula montes ornare vulputate efficitur adipiscing. Cursus condimentum tortor imperdiet aliquam rhoncus. Elit sit natoque porta adipiscing aliquam. Pellentesque tempor dui lacus; ultricies dolor ultricies. Dignissim porttitor nunc tempor eget viverra dolor tortor. Praesent lobortis pretium lobortis, pulvinar accumsan at aliquet. Parturient lectus metus est pulvinar duis faucibus fringilla proin. At malesuada varius mus magna hac nibh, integer aenean. Volutpat sit fusce cubilia nostra ultrices.
-                                
-                                Eget velit ullamcorper duis commodo porta donec habitasse lobortis. Venenatis dui feugiat cras nam leo nulla curabitur cras. Lectus ad platea senectus himenaeos curabitur sagittis nam facilisis. Dictumst faucibus magna lectus ligula scelerisque accumsan purus quis sollicitudin. Ornare at penatibus hac; cubilia pharetra sapien placerat. Mauris torquent ultricies leo vel; ornare hac libero. Aliquet senectus tristique; nulla erat a purus. Ipsum fusce per dis varius donec duis egestas. Nunc fermentum tincidunt interdum odio himenaeos enim finibus congue. Ipsum suscipit felis vitae quam torquent felis."
-                            </p>
+                            Added basic, extensible format
+                        </li>
+                        <li>
+                            Added basic presentation
+                        </li>
+                        <li>
+                            Made website mobile compatible
+                        </li>
+                        <li>
+                            Added basic profile
+                        </li>
+                    </ul>
+                    <h3>Upcoming Changes</h3>
+                    <ul>
+                        <li>
+                            Add Music Player
+                        </li>
+                        <li>
+                            Add Site Metrics
+                        </li>
+                        <li>
+                            Add Live Chat
+                        </li>
+                        <li>
+                            Add Easter Eggs
+                        </li>
+                        <li>
+                            Add Blog
+                        </li>
+                        <li>
+                            Add Banner
+                        </li>
+                        <li>
+                            Flesh out the "space"!
                         </li>
                     </ul>
                 </div>
@@ -56,19 +88,53 @@
         
         <div class="main-box">
             <div class="box">
-                <img src="images/ProfilePic.gif" alt="Profile Picture" class="profile-picture">
+                <img src="images/ProfilePic.gif" alt="Profile Picture" class="profile-picture" id="profile-picture">
                 <div class="about-me">
                     <h2>HOWDY, TRAVELER...</h2>
                     <p>
-                        Hello! My name is Brandon K. Weber. This website serves as a landing page for everything I'm up to. Peruse my projects, find easter eggs in the site, or just reach out to me via chat, email, or socials for any help that I can provide!
+                        My name is Brandon K. Weber. This website serves as a landing page for everything I'm up to. Peruse my projects or find easter eggs in the site!
                         This site is always a work in progress and I'm not a front end dev, so...tread carefully...
                     </p>
+                    <br>
+                    <p>Quick Brandon Facts:</p>
+                    <ul>
+                        <li>
+                            I'm from Texas...YEEHAW! 🤠🐄👦
+                        </li>
+                        <li>
+                            I will probably bring up pickleball every time we talk to each other.
+                        </li>
+                        <li>
+                            Master ranked TFT enjoyer (children's game i know).
+                        </li>
+                        <li>
+                            Vanderbilt Alum
+                        </li>
+                        <li>
+                            My main programming languages are Java and python, but I want to learn more!!!
+                        </li>
+                        <li>
+                            Contact me for any requests (use 
+                            <a href="mailto:bkweber@bkweber.com">email</a>).
+                        </li>
+                    </ul>
                 </div>
             </div>
             <div class="box">
                 <div class="projects">
                     <h2>PROJECTS</h2>
-                    <!-- <img src="css/donkey.gif" style="position: absolute; width: 250px; margin-top: -5px; margin-left: -300px"> -->
+                    <a target="_blank" rel=""nofollow" href="https://github.com/brandonkweber">
+                        <h3>PickleBrawl GO 🥒🥊</h3>
+                    </a>
+                    <p>A Pickleball Tournament/Event Management System: live bracket updates, real-time score updates, automatic bracket creation.</p>
+                    <a target="_blank" rel=""nofollow" href="https://github.com/brandonkweber">
+                        <h3>MyHotSpot 🔥🗺️</h3>
+                    </a>
+                    <p>Review your historical map data, curate your hotspots, let AI describe your personality based on your behavior and share on social media</p>
+                    <a target="_blank" rel=""nofollow" href="https://github.com/brandonkweber">
+                        <h3>Midye 🎹🖌️</h3>
+                    </a>
+                    <p>In response to different frequency and velocity, use MS Paint to illustrate your music!</p>
                 </div>
             </div>
         </div>
@@ -80,48 +146,52 @@
                     <ul style="margin-right: 34px;">
                         <li>
                             <a href="mailto:brandon@bkweber.com" target="_blank" style="text-decoration: none; color: inherit;">
-                                🚀 Email 🚀
+                                Email 🚀
                             </a>     
                         </li>
                         <li>
                             <a href="https://www.linkedin.com/in/brandon-weber-75244414b/" target="_blank" style="text-decoration: none; color: inherit;">
-                                🧑‍🚀 LinkedIn 🧑‍🚀
+                                LinkedIn 🧑‍🚀
                             </a>  
                         </li>
                         <li>
                             <a href="https://www.instagram.com/loafuscrumbwell/" target="_blank" style="text-decoration: none; color: inherit;">
-                                ❤️ Instagram ❤️
+                                Instagram ❤️
                             </a>
                         </li>
                     </ul>
     
                 </div>
             </div>
-            <!-- <div class="box">
-                <div class="right-transmit-panel">
-                    Transmit Message Now!
-                </div>
-            </div> -->
-            <!-- <div class="box">
-                <div class="shoutouts-panel">
-                    Shoutouts
-                </div>
-            </div> -->
-            <!-- <div class="box">
-                <div class="metrics">Site Metrics</div>
-            </div> -->
             <div class="box">
                 <div class="services-provided">
                     <h2>SERVICES</h2>
                     <ul style="margin-right: 34px;">
                         <li>
-                            🥒 PickleBall Coaching 🥒   
+                            PickleBall Coaching 🥒   
                         </li>
                         <li>
-                            🎾 Tennis Coaching 🎾   
+                            Tennis Coaching 🎾   
                         </li>
                         <li>
-                            🏫 Tutoring 🏫    
+                            Tutoring 🏫    
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="box">
+                <div class="services-provided">
+                    <h2>RECS</h2>
+                    <ul style="margin-right: 34px;">
+                        <li>
+                            <a href="https://letterboxd.com/LoafusCrumbwell/" target="_blank" style="text-decoration: none; color: inherit;">
+                                Letterboxd 🎥 
+                            </a>  
+                        </li>
+                        <li>
+                            <a href="https://www.goodreads.com/user/show/185745197-hank" target="_blank" style="text-decoration: none; color: inherit;">
+                                Goodreads 📚 
+                            </a>     
                         </li>
                     </ul>
                 </div>
