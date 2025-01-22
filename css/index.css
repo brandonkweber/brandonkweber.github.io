@@ -26,7 +26,7 @@ main {
 
 body {
   font-family: "RussianGothic", "MS UI Gothic", "NEC_APC3", Tahoma;
-  background: url('Background GIF High Def.gif') no-repeat center center fixed; /* Add your background image */
+  background: url('background.gif') no-repeat center center fixed; /* Add your background image */
   background-size: cover; /* Ensures the background image covers the entire container */
   height: 100vh; /* Matches the viewport height initially */
   display: flex;
@@ -239,4 +239,116 @@ footer {
 
 html {
   height: 100%; /* Ensures the HTML element matches the full height of the viewport or background */
+}
+
+/* Chat Box Styling */
+.chat-box {
+  border: 2px solid #32cd32; /* Neon green border */
+  overflow: hidden;
+}
+
+/* Chat Header */
+.chat-header {
+  background: linear-gradient(45deg, #32cd32, #00ff00);
+  color: black;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+/* Chat Body */
+.chat-body {
+  display: none;
+  flex-direction: column;
+  height: 450px;
+}
+
+/* Messages Area */
+.messages {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  border-top: 2px solid #32cd32;
+  background: url('https://www.transparenttextures.com/patterns/stardust.png'),
+    radial-gradient(circle, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.95));
+  background-blend-mode: overlay;
+}
+
+.messages .message {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 0.9em;
+}
+
+/* User Message */
+.messages .message.user {
+  background: linear-gradient(45deg, #007bff, #00ffff); /* Neon blue gradient */
+  color: white;
+  align-self: flex-end;
+  box-shadow: 0 0 10px #00ffff;
+}
+
+/* Bot Message */
+.messages .message.bot {
+  background: linear-gradient(45deg, #8b00ff, #ff00ff); /* Purple gradient */
+  color: white;
+  align-self: flex-start;
+  box-shadow: 0 0 10px #ff00ff;
+}
+
+/* Chat Input Area */
+.chat-input {
+  border-top: 2px solid #32cd32;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.chat-input input {
+  padding: 10px;
+  border: 2px solid #32cd32;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #e0e0e0;
+  font-size: 1em;
+  outline: none;
+  box-shadow: 0 0 0px #32cd32;
+  padding-inline: 2px;
+}
+
+.chat-input input::placeholder {
+  color: #32cd32;
+  opacity: 0.8;
+
+}
+
+.chat-input button {
+  padding: 10px 20px;
+  background: linear-gradient(45deg, #ff4500, #ff6347); /* Neon orange gradient */
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 1em;
+  text-transform: uppercase;
+  box-shadow: 0 0 0px #ff6347;
+}
+
+.chat-input button:hover {
+  background: linear-gradient(45deg, #ff6347, #ff4500);
+  box-shadow: 0 0 15px #ff4500;
+}
+
+/* Scrollbar Styling */
+.messages::-webkit-scrollbar {
+  width: 10px;
+}
+
+.messages::-webkit-scrollbar-thumb {
+  background: #32cd32;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #32cd32;
+}
+
+.messages::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.8);
 }

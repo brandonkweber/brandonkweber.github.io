@@ -5,9 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>bkweber.com</title>
-  <script src="js/script.js"></script>
   <link href="css/index.css" rel="stylesheet">
-  <link href="css/tv.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/markdown-it/dist/markdown-it.min.js"></script>
 </head>
@@ -23,18 +21,13 @@
         setTimeout(() => {
             document.getElementById('loading-screen').style.display = 'none';
             document.getElementById('profile-picture').style.display = 'block';
-        }, 1000); // Hides after 3 seconds
+        }, 1000);
     </script>
     
 
     <div class="container">
         <img src="images/3d saucer.gif" class="saucer" id="saucer">
         <div class="left-box">
-            <!-- <div class="box">
-                <nav>
-                    TV Remote
-                </nav>
-            </div> -->
             <div class="box">
                 <div class = "changelog">
                     <h2 class="update">CHANGELOG</h2>
@@ -79,11 +72,20 @@
                     </ul>
                 </div>
             </div>
-            <!-- <div class="box">
-                <div class="chat">Chat
-                    <img src="css/funkykong.gif" style="position: absolute; margin-top: 30px; margin-left: -200px">
+            <div class="box">
+                <div class = "chat">
+                    <div class="chat-box">
+                        <div class="chat-header">Transmit a Message!</div>
+                        <div class="chat-body">
+                          <div class="messages" id="messages"></div>
+                          <div class="chat-input">
+                            <input type="text" id="chatInput" placeholder="Type Here..." />
+                            <button id="sendBtn">Send</button>
+                          </div>
+                        </div>
+                    </div>
                 </div>
-            </div> -->
+            </div>
         </div>
         
         <div class="main-box">
@@ -92,8 +94,7 @@
                 <div class="about-me">
                     <h2>HOWDY, TRAVELER...</h2>
                     <p>
-                        My name is Brandon K. Weber. This website serves as a landing page for everything I'm up to. Peruse my projects or find easter eggs in the site!
-                        This site is always a work in progress and I'm not a front end dev, so...tread carefully...
+                        My name is Brandon K. Weber. I started this website to teach myself front end web development. This website serves as a landing page for everything I'm up to.
                     </p>
                     <br>
                     <p>Quick Brandon Facts:</p>
@@ -199,24 +200,11 @@
         </div>
     </div>
     <script src="script.js" defer></script>
-        <!-- Sidebar -->
-    <!-- <div class="sidemenu">
-        <ul>
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-            <li><a href="#">Link 3</a></li>
-        </ul>
-    </div> -->
 
     <audio autoplay loop>
-        <source src="images/LofiAttempt2NoGuitar.mp3" type="audio/mpeg">
+        <source src="images/AdventureTimeAmbientSound.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
-    <!-- <img src="images/NessieHatKrita.gif" alt="NessiePlsHat" class="fixed-gif">
-
-    <img src="images/qr-code.png" alt="QR-Code" class="fixed-qr">
-
-    <img src="images/Construction-Sign-Blank.png" alt="Construction-Sign" class="fixed-sign"> -->
 
 
 </body>

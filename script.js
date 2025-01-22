@@ -24,3 +24,46 @@ document.addEventListener("DOMContentLoaded", () => {
     // Initial position
     moveSaucer();
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const chatHeader = document.querySelector(".chat-header");
+  const chatBody = document.querySelector(".chat-body");
+  const messages = document.getElementById("messages");
+  const chatInput = document.getElementById("chatInput");
+  const sendBtn = document.getElementById("sendBtn");
+
+  // Toggle chat box visibility
+  chatHeader.addEventListener("click", () => {
+    chatBody.style.display = chatBody.style.display === "flex" ? "none" : "flex";
+  });
+
+  // Function to append a message
+  function appendMessage(content, sender = "user") {
+    const message = document.createElement("div");
+    message.className = `message ${sender}`;
+    message.textContent = content;
+    messages.appendChild(message);
+    messages.scrollTop = messages.scrollHeight; // Auto-scroll to the bottom
+  }
+
+  // Handle send button click
+  sendBtn.addEventListener("click", () => {
+    const messageText = chatInput.value.trim();
+    if (messageText) {
+      appendMessage(messageText, "user");
+      chatInput.value = ""; // Clear input field
+
+      // Simulate a bot response
+      setTimeout(() => {
+        appendMessage("Thanks for chatting! I still need to build this out with a backend so users can see each other's messages!", "bot");
+      }, 1000);
+    }
+  });
+
+  // Handle Enter key press
+  chatInput.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      sendBtn.click();
+    }
+  });
+});
