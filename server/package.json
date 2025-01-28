@@ -1,0 +1,16 @@
+{
+  "name": "brandonkweber.github.io",
+  "version": "1.0.0",
+  "description": "- Solidify Site style\r   - Health Tracker\r   - Hidden Game\r   - Livestream Embed --> Who Am I watching?\r   - Spotify Integration\r   - Blog\r   - Who Am I\r   - Site Stats\r   - CRT Home with different channels through TV Guide\r   - Require Password to access anything other than first landing page\r   - Projects Page\r   - Day/Night Mode\r   - RealTime Weather\r     - Default to New York, NY.\r     - Location Configurable\r   - Add Backend Server with API to store site info\r   - Optional Notifications on site updates\r   - Menu Page\r     - Inventory\r     - Skills: Spells to cast that change your website experience\r     - Quests: Upcoming changes",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2",
+    "socket.io": "^4.8.1"
+  }
+}
