@@ -1,15 +1,19 @@
 const express = require('express');
 const cors = require('cors');
-const { Server } = require('socket.io');
 const http = require('http');
+const { Server } = require('socket.io');
 
 const app = express();
 const server = http.createServer(app);
 
-// Enable CORS for all routes
-app.use(cors());
+// Enable CORS for Express
+app.use(cors({
+    origin: 'https://bkweber.com', // Replace with your front-end URL
+    methods: ['GET', 'POST'],
+    credentials: true
+}));
 
-// Set up Socket.io with CORS options
+// Configure Socket.IO with CORS
 const io = new Server(server, {
     cors: {
         origin: 'https://bkweber.com', // Replace with your front-end URL
@@ -17,8 +21,12 @@ const io = new Server(server, {
     }
 });
 
+// Socket.IO connection handler
 io.on('connection', (socket) => {
     console.log('A user connected');
+    socket.on('message', (data) => {
+        console.log('Message received:', data);
+    });
     socket.on('disconnect', () => {
         console.log('User disconnected');
     });
