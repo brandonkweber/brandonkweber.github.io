@@ -6,8 +6,14 @@ const cors = require('cors');
 const app = express();
 const server = http.createServer(app);
 
+const corsOptions = {
+    origin: 'https://brandonkweber.github.io', // Allow only this origin
+    methods: ['GET', 'POST'],                  // Allow only GET and POST
+    allowedHeaders: ['Content-Type'],          // Allow only specific headers
+};
+
 // Allow CORS (for requests from GitHub Pages)
-app.use(cors({ origin: 'https://brandonkweber.github.io' }));
+app.use(cors(corsOptions));
 
 // Initialize Socket.IO
 const io = new Server(server, {
