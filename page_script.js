@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
       chatBody.style.display = chatBody.style.display === "flex" ? "none" : "flex";
     });
   
-    const socket = io('https://fast-atoll-81814-a5723ac349f5.herokuapp.com/'); // Connect to the server
+    const socket = io('https://dry-hamlet-73350-c27e85a556ce.herokuapp.com/'); // Connect to the server
     socket.on('connect', () => {
       console.log('Connected to the server');
     });
