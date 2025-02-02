@@ -76,6 +76,7 @@ body {
   float: right; /* Align to the right */
   margin-left: 20px; /* Add spacing between the image and the content */
   margin-bottom: 20px;
+  width: 200px;
   border: 5px solid transparent;
   animation: flashing-border 1.5s infinite;
   transform: translate(-10px, 10px); /* Shift left 10px and down 10px */
