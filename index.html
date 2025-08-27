@@ -1,251 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>bkweber.com</title>
-  <link href="css/index.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/markdown-it/dist/markdown-it.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brandon's Room</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
-
-
 <body>
-
-    <div id="loading-screen" style="position: fixed; width: 100%; height: 100%; background: #000; color: #fff; display: flex; justify-content: center; align-items: center;">
-        <p>Loading... <br> Version 1.0.0</p>
-    </div>
-    
-    <script>
-        setTimeout(() => {
-            document.getElementById('loading-screen').style.display = 'none';
-            document.getElementById('profile-picture').style.display = 'block';
-        }, 1000);
-    </script>
-    
-
-    <div class="container">
-        <img src="images/3d saucer.gif" class="saucer" id="saucer">
-        <div class="left-box">
-            <div class="box">
-                <div class = "changelog">
-                    <h2 class="update">CHANGELOG</h2>
-                    <h3>Version 1.0.0</h3>
-                    <ul>
-                        <li>
-                            Added basic, extensible format
-                        </li>
-                        <li>
-                            Added basic presentation
-                        </li>
-                        <li>
-                            Made website mobile compatible
-                        </li>
-                        <li>
-                            Added basic profile
-                        </li>
-                    </ul>
-                    <h3>Upcoming Changes</h3>
-                    <ul>
-                        <li>
-                            Add Music Player
-                        </li>
-                        <li>
-                            Add Site Metrics
-                        </li>
-                        <li>
-                            Add Live Chat
-                        </li>
-                        <li>
-                            Add Easter Eggs
-                        </li>
-                        <li>
-                            Add Blog
-                        </li>
-                        <li>
-                            Add Banner
-                        </li>
-                        <li>
-                            Flesh out the "space"!
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="box">
-                <div class = "chat">
-                    <div class="chat-box">
-                        <div class="chat-header">Transmit a Message!</div>
-                        <div class="chat-body">
-                          <div class="messages" id="messages"></div>
-                          <div class="chat-input">
-                            <input type="text" id="chatInput" placeholder="Type Here..." />
-                            <button id="sendBtn">Send</button>
-                          </div>
+    <div class="page-container">
+        <nav>This is the nav</nav>
+        <div class="background-container">
+            <div class="bg-item wall"></div>
+            <div class="bg-item lining"></div>
+            <div class="bg-item carpet"></div>
+        </div>
+        <div class="foreground-container">
+            <div class="sensor-bar"></div>
+            <div class="tv-container">
+                <div class="tv-screen" id="page-landing">
+                    <div id="main-menu">
+                        <div class="main-menu-options">
+                            <div class="menu-item menu-box" id="option-about">
+                                <img src="assets/icons/id-card.png">
+                                <h4>About</h4>
+                            </div>
+                            <div class="menu-item menu-box">
+                               <img id="option-work" src="assets/icons/portfolio.png">
+                                <h4>Work</h4>
+                            </div>
+                            <div class="menu-item menu-box">
+                                <img id="option-links" src="assets/icons/link.png">
+                                <h4>Links</h4>
+                            </div>
+                            <div class="menu-item menu-box" id="option-faq">
+                                <img id="option-links" src="assets/icons/faq.png">
+                                <h4>FAQ</h4>      
+                            </div>
+                        </div>
+                        <div class="profile-pic-block">
+                            <img class="menu-item" src="assets/images/ProfilePicCropped.jpg">
+                        </div>
+                    </div>
+                    <div id="bottom-menu">
+                        <div class="menu-item scroll-news">
+                            <h2>This is the scrolling box</h2>
+                        </div>
+                        <div class="menu-item menu-circle">
+                            <img id="option-mail" src="assets/icons/email.png">
+                        </div>
+                        <div class="menu-item menu-circle">
+                            <img id="option-settings" src="assets/icons/file.png">
                         </div>
                     </div>
                 </div>
+                <div class="tv-screen" id="page-info">
+                    
+                </div>
             </div>
+            <div class="tv-name">
+                <h3>BKWEBER.COM</h3>
+            </div>
+            <div class="tv-stand"></div>
         </div>
-        
-        <div class="main-box">
-            <div class="box">
-                <img src="images/ProfilePic.gif" alt="Profile Picture" class="profile-picture" id="profile-picture">
-                <div class="about-me">
-                    <h2>HOWDY, TRAVELER...</h2>
-                    <p>
-                        My name is Brandon K. Weber. I started this website to teach myself front end web development. This website serves as a landing page for everything I'm up to.
-                    </p>
-                    <br>
-                    <p>Quick Brandon Facts:</p>
-                    <ul>
-                        <li>
-                            I'm from Texas...YEEHAW! 🤠🐄👦
-                        </li>
-                        <li>
-                            I will probably bring up pickleball every time we talk to each other.
-                        </li>
-                        <li>
-                            Master ranked TFT enjoyer (children's game i know).
-                        </li>
-                        <li>
-                            Vanderbilt Alum
-                        </li>
-                        <li>
-                            My main programming languages are Java and python, but I want to learn more!!!
-                        </li>
-                        <li>
-                            Contact me for any requests (use 
-                            <a href="mailto:bkweber@bkweber.com">email</a>).
-                        </li>
-                    </ul>
-                    <!-- <h2>Happy Birthday, Brittany!</h2>
-                    <p>
-                        Shoutout to my sister for her birthday! Don't worry this will be reverted by EOD tomorrow.
-                    </p>
-                    <br>
-                    <p>Quick Brittany Facts:</p>
-                    <ul>
-                        <li>
-                            She's from Texas...YEEHAW! 🤠
-                        </li>
-                        <li>
-                            She's in a band! 🎸🎤
-                        </li>
-                        <li>
-                            All around great person 🌈.
-                        </li>
-                    </ul> -->
-                </div>
-            </div>
-            <div class="box">
-                <div class="projects">
-                    <h2>FUN PROJECTS</h2>
-                    <a target="_blank" rel=""nofollow" href="https://github.com/brandonkweber">
-                        <h3>PickleBrawl GO 🥒🥊 - ETA ... who knows...</h3>
-                    </a>
-                    <p>A Pickleball Tournament/Event Management System: live bracket updates, real-time score updates, automatic bracket creation.</p>
-                    <a target="_blank" rel=""nofollow" href="https://github.com/brandonkweber">
-                        <h3>MyHotSpot 🔥🗺️ (Coming Soon)</h3>
-                    </a>
-                    <p>Review your historical map data, curate your hotspots, let AI describe your personality based on your behavior and share on social media</p>
-                    <a target="_blank" rel=""nofollow" href="https://github.com/brandonkweber">
-                        <h3>Midye 🎹🖌️ (Coming Soon)</h3>
-                    </a>
-                    <p>In response to different frequency and velocity, use MS Paint to illustrate your music!</p>
-                </div>
-            </div>
-            <div class="box">
-                <div class="projects">
-                    <h2>TECHNICAL PROJECTS</h2>
-                    <a target="_blank" rel=""nofollow" href="https://github.com/brandonkweber">
-                        <h3>Java Tasks ☕📝 - ETA... who knows....</h3>
-                    </a>
-                    <p>Web-Based Task Management System: Spring Boot + Java + SQL + Flyway</p>
-                    <a target="_blank" rel=""nofollow" href="https://github.com/brandonkweber">
-                        <h3>Python ML Thing 🐍🐑 (Coming Soon)</h3>
-                    </a>
-                    <p>Idk something with python</p>
-                    <a target="_blank" rel=""nofollow" href="https://github.com/brandonkweber">
-                        <h3>Golang Thing (Coming Soon)</h3>
-                    </a>
-                    <p>Something with Go(lang)</p>
-                </div>
-            </div>
-            <div class="box">
-                <canvas id="gameCanvas"></canvas>
-            </div>
-        </div>
-        
-        <div class="right-box">
-            <div class="box">
-                <div class="right-contacts-panel">
-                    <h2>CONTACT ME</h2> 
-                    <ul style="margin-right: 34px;">
-                        <li>
-                            <a href="mailto:brandon@bkweber.com" target="_blank" style="text-decoration: none; color: inherit;">
-                                Email 🚀
-                            </a>     
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/in/brandon-weber-75244414b/" target="_blank" style="text-decoration: none; color: inherit;">
-                                LinkedIn 🧑‍🚀
-                            </a>  
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/loafuscrumbwell/" target="_blank" style="text-decoration: none; color: inherit;">
-                                Instagram ❤️
-                            </a>
-                        </li>
-                    </ul>
-    
-                </div>
-            </div>
-            <div class="box">
-                <div class="services-provided">
-                    <h2>SERVICES</h2>
-                    <ul style="margin-right: 34px;">
-                        <li>
-                            PickleBall Coaching 🥒   
-                        </li>
-                        <li>
-                            Tennis Coaching 🎾   
-                        </li>
-                        <li>
-                            Tutoring 🏫    
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="box">
-                <div class="services-provided">
-                    <h2>RECS</h2>
-                    <ul style="margin-right: 34px;">
-                        <li>
-                            <a href="https://letterboxd.com/LoafusCrumbwell/" target="_blank" style="text-decoration: none; color: inherit;">
-                                Letterboxd 🎥 
-                            </a>  
-                        </li>
-                        <li>
-                            <a href="https://www.goodreads.com/user/show/185745197-hank" target="_blank" style="text-decoration: none; color: inherit;">
-                                Goodreads 📚 
-                            </a>     
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="box-borderless">
-                <img id="clickableImage" src="images/aliencreature.png" alt="Click Me">
-                <div class="counter-container">Click The Creature: <span id="counter">0</span></p>
-            </div>
-        </div>
+        <footer>© 2025 Brandon Weber</footer>
     </div>
-    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
-    <script src="page_script.js" defer></script>
-    <script src="pong.js"></script>
-    <audio id="clickSound" src="sounds/yippee-short.mp3"></audio>
-    <script src="yippeecounter.js"></script>
-
+    <div class="music-man"></div>
+    <script src="js/script.js"></script>
 </body>
-
 </html>

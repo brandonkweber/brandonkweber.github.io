@@ -1,0 +1,185 @@
+body, html {
+  margin: 0;
+  height: 100%;
+}
+
+.page-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.background-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.bg-item {
+  flex: 1;               /* each takes equal width */
+  height: 100%;
+}
+
+.wall { background: #cce; }   /* example colors */
+.lining { background: rgb(160, 67, 160); }
+.carpet { background: #cec; }
+
+.foreground-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);  /* center it */
+  z-index: 2;
+  text-align: center;
+  padding: 2rem;
+  width: 1920px;
+  height: 1080px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(180, 179, 179);
+}
+
+
+.tv-container, .tv-name {
+  text-align: center;
+  background: rgba(218, 23, 23); /* optional overlay */
+  width: 1000px;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+}
+
+.tv-stand {
+  background: rgba(56, 9, 9); /* optional overlay */
+  width: 1100px;
+  height: 250px;
+}
+
+.tv-name {
+  height: 50px;
+  background: green;
+  text-align: center;
+}
+
+.sensor-bar {
+  background: rgb(0, 0, 0); /* optional overlay */
+  width: 200px;
+  height: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.tv-screen {
+  width: 95%;
+  height: 90%;
+  display: none;
+}
+
+.tv-screen.active {
+  display: flex; /* only the active one shows */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+#main-menu, #bottom-menu {
+  display: flex;
+  width: 100%;
+  padding: 10px;
+  justify-content: center;
+}
+
+#main-menu {
+  height: 75%;
+}
+
+#bottom-menu {
+  height: 25%;
+  gap: 12px;
+}
+
+#page-landing {
+  background: linear-gradient(135deg, #3494E6, #EC6EAD);
+}
+
+#page-info {
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+}
+
+.main-menu-options {
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.profile-pic-block {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-item {
+ border: 7px solid  #2FCDFE;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+}
+
+.menu-box {
+  width: 45%;
+  height: 45%;
+}
+
+.scroll-news {
+  width: 82%;
+  background: black;
+  opacity: 70%;
+  font-family: 'Press Start 2P';
+}
+
+h2 {
+  color: white;
+}
+
+.menu-circle {
+  width: 9%;
+  border-radius: 50%;
+}
+
+#option-settings, #option-mail {
+  width: 55px;
+}
+
+#option-work {
+  width: 40%
+}
+
+
+h3 {
+  margin: auto;
+  font-family: AudioWide
+}
+
+nav {
+    position: absolute;
+    z-index: 3;
+    top: 1%;
+    width: 100%;
+}
+
+footer {
+    position: absolute;
+    z-index: 4;
+    bottom: 1%;
+    width: 100%;
+    text-align: center;
+}
