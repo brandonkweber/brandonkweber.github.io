@@ -11,11 +11,28 @@ function showPage(pageId) {
   }
 }
 
-// Example usage:
-// Later you can call: showPage('page-info');
-  const aboutDiv = document.getElementById("option-about");
+const backBtnNodes = document.querySelectorAll('.back-button').forEach(el => {
+  el.addEventListener("click", () => showPage("page-landing"));
+});
 
-  // add click event listener
-  aboutDiv.addEventListener("click", () =>
-    showPage("page-info"));
-showPage('page-landing'); // show landing by default
+document.querySelectorAll('.collapse-box').forEach(box => {
+  const title = box.querySelector('.collapse-title-box');
+  title.addEventListener('click', () => {
+    box.classList.toggle('active');
+  });
+});
+
+const aboutMenuBtn = document.getElementById("option-about");
+aboutMenuBtn.addEventListener("click", () => showPage("page-info"));
+const workMenuBtn = document.getElementById("option-work");
+workMenuBtn.addEventListener("click", () => showPage("page-work"));
+const linksMenuBtn = document.getElementById("option-links");
+linksMenuBtn.addEventListener("click", () => showPage("page-links"));
+const faqMenuBtn = document.getElementById("option-faq");
+faqMenuBtn.addEventListener("click", () => showPage("page-faq"));
+const contactMenuBtn = document.getElementById("option-contact");
+contactMenuBtn.addEventListener("click", () => showPage("page-contact"));
+const changelogMenuBtn = document.getElementById("option-changelog");
+changelogMenuBtn.addEventListener("click", () => showPage("page-changelog"));
+
+showPage('page-landing'); 

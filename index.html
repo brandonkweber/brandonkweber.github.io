@@ -8,10 +8,14 @@
 </head>
 <body>
     <div class="page-container">
-        <nav>This is the nav</nav>
+        <nav>
+            <img id="light-toggle" src="assets/icons/brightness.png">
+        </nav>
         <div class="background-container">
             <div class="bg-item wall"></div>
-            <div class="bg-item lining"></div>
+            <div class="bg-item lining">
+                
+            </div>
             <div class="bg-item carpet"></div>
         </div>
         <div class="foreground-container">
@@ -22,19 +26,19 @@
                         <div class="main-menu-options">
                             <div class="menu-item menu-box" id="option-about">
                                 <img src="assets/icons/id-card.png">
-                                <h4>About</h4>
+                                <h5>About</h5>
                             </div>
-                            <div class="menu-item menu-box">
+                            <div class="menu-item menu-box" id="option-work">
                                <img id="option-work" src="assets/icons/portfolio.png">
-                                <h4>Work</h4>
+                                <h5>Work</h5>
                             </div>
-                            <div class="menu-item menu-box">
+                            <div class="menu-item menu-box" id="option-links">
                                 <img id="option-links" src="assets/icons/link.png">
-                                <h4>Links</h4>
+                                <h5>Links</h5>
                             </div>
                             <div class="menu-item menu-box" id="option-faq">
                                 <img id="option-links" src="assets/icons/faq.png">
-                                <h4>FAQ</h4>      
+                                <h5>FAQ</h5>      
                             </div>
                         </div>
                         <div class="profile-pic-block">
@@ -45,16 +49,134 @@
                         <div class="menu-item scroll-news">
                             <h2>This is the scrolling box</h2>
                         </div>
-                        <div class="menu-item menu-circle">
-                            <img id="option-mail" src="assets/icons/email.png">
+                        <div class="menu-item menu-circle" id="option-contact">
+                            <img src="assets/icons/email.png">
                         </div>
-                        <div class="menu-item menu-circle">
-                            <img id="option-settings" src="assets/icons/file.png">
+                        <div class="menu-item menu-circle" id="option-changelog">
+                            <img src="assets/icons/file.png">
                         </div>
                     </div>
                 </div>
                 <div class="tv-screen" id="page-info">
-                    
+                    <div id="info-left-column">
+                        <div id="about-profile-circle"></div>
+                        <h4>Brandon Weber</h4>
+                        <p>Texas-based Software Developer</p>
+                        <p>Currently Work at: <a href="quarterhill.com">Quarterhill</a></p>
+                    </div>
+                    <div id="info-right-column">
+                        <div id="info-text-block">
+                        <p id="info-text">Howdy! I’m Brandon K. Weber. I started this website to teach myself front end web development. This website serves as a landing page for everything I’m up to. Interested in working with me? Send me an email at brandon@bkweber.com QUICK BRANDON FACTS Primarily Backend Focused: Java Spring Boot, PostgreSQL, Python Google Cloud Professional BS in Computer Science, Vanderbilt University OTHER INTERESTS Singing & Guitar Pickleball Tennis Embedded Systems Personal Fitness Personal Finance Gaming Travel (I want to do more!) Light Mode PHOTOS</p>
+                        </div>
+                        <div id="infinite-photo-slideshow"></div>
+                    </div>
+                    <div class="back-button menu-item">
+                        <img src="assets/icons/arrow.png">
+                    </div>
+                </div>
+                <div class="tv-screen" id="page-work">
+                    <div class="menu-item work-box">Projects</div>
+                    <div class="menu-item work-box">Development Skills</div>
+                    <div class="menu-item work-box">Experience</div>
+                    <div class="menu-item work-box">Other Skills</div>
+                    <div class="back-button menu-item">
+                        <img src="assets/icons/arrow.png">
+                    </div> 
+                </div>
+                <div class="tv-screen" id="page-links">
+                    <div class="menu-item links-box">
+                        <img src="assets/icons/instagram.png">
+                    </div>
+                    <div class="menu-item links-box">
+                        <img src="assets/icons/linkedin.png">
+                    </div>
+                    <div class="menu-item links-box">
+                        <img src="assets/icons/youtube.png">
+                    </div>
+                    <div class="back-button menu-item">
+                        <img src="assets/icons/arrow.png">
+                    </div> 
+                </div>
+                <div class="tv-screen" id="page-faq">
+                    <div class="faq-box">
+                        <div class="collapse-box">
+                        <div class="collapse-title-box">
+                            <div class="collapse-title-text">How did you make this website?</div>
+                            <img src="assets/icons/expand-button.png">
+                        </div>
+
+                        <div class="collapse-content">
+                            <ul>
+                            <li>Languages: HTML, CSS, Javascript</li>
+                            <li>Deployment: Github Pages</li>
+                            <li>Languages: HTML, CSS, Javascript</li>
+                            <li>Deployment: Github Pages</li>
+                            </ul>
+                        </div>
+                        </div>
+
+                        <div class="collapse-box">
+                        <div class="collapse-title-box">
+                            <div class="collapse-title-text">How did you make this website?</div>
+                            <img src="assets/icons/expand-button.png">
+                        </div>
+
+                        <div class="collapse-content">
+                            <ul>
+                            <li>Languages: HTML, CSS, Javascript</li>
+                            <li>Deployment: Github Pages</li>
+                            <li>Languages: HTML, CSS, Javascript</li>
+                            <li>Deployment: Github Pages</li>
+                            </ul>
+                        </div>
+                        </div>
+
+                        <div class="collapse-box">
+                        <div class="collapse-title-box">
+                            <div class="collapse-title-text">How did you make this website?</div>
+                            <img src="assets/icons/expand-button.png">
+                        </div>
+
+                        <div class="collapse-content">
+                            <ul>
+                            <li>Languages: HTML, CSS, Javascript</li>
+                            <li>Deployment: Github Pages</li>
+                            <li>Languages: HTML, CSS, Javascript</li>
+                            <li>Deployment: Github Pages</li>
+                            </ul>
+                        </div>
+                        </div>
+
+                        <div class="collapse-box">
+                        <div class="collapse-title-box">
+                            <div class="collapse-title-text">How did you make this website?</div>
+                            <img src="assets/icons/expand-button.png">
+                        </div>
+
+                        <div class="collapse-content">
+                            <ul>
+                            <li>Languages: HTML, CSS, Javascript</li>
+                            <li>Deployment: Github Pages</li>
+                            <li>Languages: HTML, CSS, Javascript</li>
+                            <li>Deployment: Github Pages</li>
+                            </ul>
+                        </div>
+                        </div>
+
+                    </div>
+                    <div class="back-button menu-item">
+                        <img src="assets/icons/arrow.png">
+                    </div> 
+                </div>
+                <div class="tv-screen" id="page-contact">
+                    <div class="back-button menu-item">
+                        <img src="assets/icons/arrow.png">
+                    </div> 
+                </div>
+                <div class="tv-screen" id="page-changelog">
+                    <div class="back-button menu-item">
+                        <img src="assets/icons/arrow.png">
+                    </div> 
                 </div>
             </div>
             <div class="tv-name">
