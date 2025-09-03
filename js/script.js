@@ -22,6 +22,28 @@ document.querySelectorAll('.collapse-box').forEach(box => {
   });
 });
 
+/* Sounds */
+const clickSound = document.getElementById('click-sound');
+const hoverSound = document.getElementById('hover-sound');
+document.querySelectorAll('.clickable').forEach(el => {
+  el.addEventListener('click', () => {
+    clickSound.currentTime = 0;
+    clickSound.volume = 0.5;
+    clickSound.play();
+  });
+});
+
+document.querySelectorAll('.clickable').forEach(el => {
+  el.addEventListener('mouseenter', () => {
+    const audio = new Audio('./assets/sounds/wii-hover.mp3');
+    audio.volume = 0.2;
+    audio.play();
+  });
+});
+
+
+
+/* Clean this up */
 const aboutMenuBtn = document.getElementById("option-about");
 aboutMenuBtn.addEventListener("click", () => showPage("page-info"));
 const workMenuBtn = document.getElementById("option-work");

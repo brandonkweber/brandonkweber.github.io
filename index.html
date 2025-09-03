@@ -24,19 +24,19 @@
                 <div class="tv-screen" id="page-landing">
                     <div id="main-menu">
                         <div class="main-menu-options">
-                            <div class="menu-item menu-box" id="option-about">
+                            <div class="menu-item menu-box clickable hoverable" id="option-about">
                                 <img src="assets/icons/id-card.png">
                                 <h5>About</h5>
                             </div>
-                            <div class="menu-item menu-box" id="option-work">
+                            <div class="menu-item menu-box clickable hoverable" id="option-work">
                                <img id="option-work" src="assets/icons/portfolio.png">
                                 <h5>Work</h5>
                             </div>
-                            <div class="menu-item menu-box" id="option-links">
+                            <div class="menu-item menu-box clickable hoverable" id="option-links">
                                 <img id="option-links" src="assets/icons/link.png">
                                 <h5>Links</h5>
                             </div>
-                            <div class="menu-item menu-box" id="option-faq">
+                            <div class="menu-item menu-box clickable hoverable" id="option-faq">
                                 <img id="option-links" src="assets/icons/faq.png">
                                 <h5>FAQ</h5>      
                             </div>
@@ -46,13 +46,18 @@
                         </div>
                     </div>
                     <div id="bottom-menu">
-                        <div class="menu-item scroll-news">
-                            <h2>This is the scrolling box</h2>
+                        <div class="menu-item scroll-news-container">
+                            <div class="marquee">
+                                <div class="marquee__inner">
+                                    <span>Howdy! I'm Brandon Weber, and I probably just told you to stop by here...</span>
+                                    <span>  Howdy! I'm Brandon Weber, and I probably just told you to stop by here...</span>
+                                </div>    
+                           </div>
                         </div>
-                        <div class="menu-item menu-circle" id="option-contact">
+                        <div class="menu-item menu-circle clickable hoverable" id="option-contact">
                             <img src="assets/icons/email.png">
                         </div>
-                        <div class="menu-item menu-circle" id="option-changelog">
+                        <div class="menu-item menu-circle clickable hoverable" id="option-changelog">
                             <img src="assets/icons/file.png">
                         </div>
                     </div>
@@ -70,7 +75,7 @@
                         </div>
                         <div id="infinite-photo-slideshow"></div>
                     </div>
-                    <div class="back-button menu-item">
+                    <div class="back-button menu-item clickable hoverable">
                         <img src="assets/icons/arrow.png">
                     </div>
                 </div>
@@ -79,7 +84,7 @@
                     <div class="menu-item work-box">Development Skills</div>
                     <div class="menu-item work-box">Experience</div>
                     <div class="menu-item work-box">Other Skills</div>
-                    <div class="back-button menu-item">
+                    <div class="back-button menu-item clickable hoverable">
                         <img src="assets/icons/arrow.png">
                     </div> 
                 </div>
@@ -93,7 +98,7 @@
                     <div class="menu-item links-box">
                         <img src="assets/icons/youtube.png">
                     </div>
-                    <div class="back-button menu-item">
+                    <div class="back-button menu-item clickable hoverable">
                         <img src="assets/icons/arrow.png">
                     </div> 
                 </div>
@@ -164,17 +169,17 @@
                         </div>
 
                     </div>
-                    <div class="back-button menu-item">
+                    <div class="back-button menu-item clickable hoverable">
                         <img src="assets/icons/arrow.png">
                     </div> 
                 </div>
                 <div class="tv-screen" id="page-contact">
-                    <div class="back-button menu-item">
+                    <div class="back-button menu-item clickable hoverable">
                         <img src="assets/icons/arrow.png">
                     </div> 
                 </div>
                 <div class="tv-screen" id="page-changelog">
-                    <div class="back-button menu-item">
+                    <div class="back-button menu-item clickable hoverable">
                         <img src="assets/icons/arrow.png">
                     </div> 
                 </div>
@@ -187,6 +192,8 @@
         <footer>© 2025 Brandon Weber</footer>
     </div>
     <div class="music-man"></div>
+    <audio id="click-sound" src="assets/sounds/wii-click.mp3" preload="auto"></audio>
+    <audio id="hover-sound" src="assets/sounds/wii-hover.mp3" preload="auto"></audio>
     <script src="js/script.js"></script>
 </body>
 </html>

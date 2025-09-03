@@ -1,6 +1,29 @@
+@font-face {
+  font-family: "Lexend Deca";
+  src: url("/assets/fonts/LexendDeca-VariableFont.ttf") format("truetype");
+  font-weight: 100 900; /* variable font supports a range of weights */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Audiowide";
+  src: url("/assets/fonts/Audiowide-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Press Start 2P";
+  src: url("/assets/fonts/PressStart2P-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 body, html {
   margin: 0;
   height: 100%;
+  font-family: "Lexend Deca", sans-serif;
 }
 
 .page-container {
@@ -21,11 +44,14 @@ body, html {
   height: 85%; 
 } 
 .lining { 
-  background: url('../assets/textures/Wood066_1K-JPG_Color.jpg') repeat;
-  height: 8%; 
+  background: url('../assets/textures/Wood094_1K-JPG_Color.jpg') repeat;
+  height: 8%;
+  box-shadow:
+    0 -4px 6px rgba(0, 0, 0, 0.25), /* top shadow */
+    0  4px 6px rgba(0, 0, 0, 0.25); /* bottom shadow */
 }
 .carpet { 
-  background: url('../assets/textures/Carpet013_1K-PNG_Color.png') repeat;
+  background: url('../assets/textures/Carpet008_1K-JPG_Color.jpg') repeat;
   height: 32%;
 }
 
@@ -47,7 +73,7 @@ body, html {
 
 .tv-container, .tv-name {
   text-align: center;
-  background: rgba(218, 23, 23); /* optional overlay */
+  background: url('../assets/textures/Plastic012A_1K-JPG_Color.jpg') repeat;
   width: 52%;
   height: 55.5%;
   display: flex;
@@ -58,14 +84,14 @@ body, html {
 }
 
 .tv-stand {
-  background: rgba(56, 9, 9); /* optional overlay */
+  background: url('../assets/textures/Wood066_1K-JPG_Color.jpg') repeat;
   width: 57%;
   height: 23%;
 }
 
 .tv-name {
   height: 4.6%;
-  background: green;
+  background: url('../assets/textures/Plastic004_1K-JPG_Color.jpg') repeat;
   text-align: center;
 }
 
@@ -188,16 +214,53 @@ body, html {
   object-fit: contain; /* keeps aspect ratio */
 }
 
-.scroll-news {
-  width: 82%;
+.scroll-news-container {
+  width: 70%;
   background: black;
   opacity: 70%;
   font-family: 'Press Start 2P';
 }
 
 h2 {
-  color: white;
+  font-family: 'Press Start 2P';
+  letter-spacing: 2px;
+
+  color: #00ff99; /* neon green vibe */
+  text-shadow: 2px 2px 0 #000, 4px 4px 0 #333; /* pixel-like shadow */
 }
+
+.marquee {
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;          
+  color: #00ff99;          /* text color */
+  font-family: "Press Start 2P", monospace;
+  text-shadow: 2px 2px 0 #000, 4px 4px 0 #333; /* pixel-like shadow */
+  font-size: 2.5rem;
+  padding: 10px 0;
+}
+
+.marquee__inner {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll 10s linear infinite;
+}
+
+.marquee__inner span {
+  padding-right: 0rem; /* spacing between copies */
+}
+
+/* Keyframes to scroll continuously */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50.25%);
+  }
+}
+
 
 .menu-circle {
   width: 85px;
@@ -215,7 +278,18 @@ h2 {
 
 h3 {
   margin: auto;
-  font-family: AudioWide
+  font-family: AudioWide;
+    /* Metallic look */
+  background: linear-gradient(135deg, #d7d7d7 0%, #ffffff 30%, #a6a6a6 50%, #e6e6e6 70%, #b7b7b7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* 3D effect with layered shadows */
+  text-shadow:
+    1px 1px 1px #a1a1a1,
+    2px 2px 2px #444,
+    3px 3px 3px #333,
+    4px 4px 4px rgba(0,0,0,0.6);
 }
 
 nav {
@@ -357,3 +431,15 @@ p, h4 {
   transition: max-height 0.5s ease-in;
 }
 
+h5 {
+  font-size: 1.5em;
+}
+
+.hoverable {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;  
+}
+
+
+.hoverable:hover {
+  transform: scale(1.05); /* enlarge 5% */
+}
