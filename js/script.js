@@ -41,9 +41,7 @@ document.querySelectorAll('.clickable').forEach(el => {
   });
 });
 
-
-
-/* Clean this up */
+/* TODO: Clean this up */
 const aboutMenuBtn = document.getElementById("option-about");
 aboutMenuBtn.addEventListener("click", () => showPage("page-info"));
 const workMenuBtn = document.getElementById("option-work");
@@ -57,4 +55,18 @@ contactMenuBtn.addEventListener("click", () => showPage("page-contact"));
 const changelogMenuBtn = document.getElementById("option-changelog");
 changelogMenuBtn.addEventListener("click", () => showPage("page-changelog"));
 
-showPage('page-landing'); 
+/* About Profile Slideshow */
+const slides = document.querySelectorAll('.about-profile-circle-slideshow img');
+let index = 0;
+
+function showNextSlide() {
+  slides[index].classList.remove('active');
+  index = (index + 1) % slides.length;
+  slides[index].classList.add('active');
+}
+
+// start slideshow
+slides[index].classList.add('active');
+setInterval(showNextSlide, 7500); // change every 3s
+
+showPage('page-info'); 

@@ -209,8 +209,6 @@ body, html {
 }
 
 .menu-item img {
-  max-width: 40%;
-  max-height: 40%;
   object-fit: contain; /* keeps aspect ratio */
 }
 
@@ -356,14 +354,29 @@ footer {
   background: green;
 }
 
-#about-profile-circle {
+.about-profile-circle-slideshow {
   height: 250px;
   width: 250px;
-  background: white;
   border-radius: 50%;
-  padding: 10px;
   margin-bottom: 10px;
+  overflow: hidden;
+  position: relative;
 }
+
+.about-profile-circle-slideshow img {
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  top: 0;
+  left: -10;
+  opacity: 0;
+  transition: opacity 2s ease;  
+}
+
+.about-profile-circle-slideshow img.active {
+  opacity: 1;
+}
+
 
 p, h4 {
   margin: 0px;
