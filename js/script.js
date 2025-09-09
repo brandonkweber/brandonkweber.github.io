@@ -69,4 +69,64 @@ function showNextSlide() {
 slides[index].classList.add('active');
 setInterval(showNextSlide, 7500); // change every 3s
 
-showPage('page-info'); 
+showPage('page-info');
+
+//Changelog
+  let memos = [];
+  let currentCategory = "active";
+
+  // Load memos from JSON file
+  async function loadMemos() {
+    try {
+      const response = await fetch("memos/memos.json");
+      memos = await response.json();
+      displayMemos();
+    } catch (error) {
+      console.error("Error loading memos:", error);
+    }
+  }
+
+  // Display memos in the list
+  function displayMemos() {
+    const memoList = document.getElementById("memo-list");
+    memoList.innerHTML = "";
+
+    const filteredMemos = memos.filter(memo => memo.category === currentCategory);
+
+    if (filteredMemos.length === 0) {
+      memoList.innerHTML = "<p>No memos found.</p>";
+      return;
+    }
+
+    filteredMemos.forEach(memo => {
+      const div = document.createElement("div");
+      div.classList.add("memo-item");
+      div.textContent = memo.title;
+      div.onclick = () => showMemo(memo);
+      memoList.appendChild(div);
+    });
+  }
+
+  // Show a memo's content
+  function showMemo(memo) {
+    const memoContent = document.getElementById("memo-content");
+    memoContent.innerHTML = `
+      <h2>${memo.title}</h2>
+      <p>${memo.content}</p>
+    `;
+  }
+
+  // Button handling
+  document.getElementById("btn-active").onclick = () => switchCategory("active", "btn-active");
+  document.getElementById("btn-future").onclick = () => switchCategory("future", "btn-future");
+  document.getElementById("btn-completed").onclick = () => switchCategory("completed", "btn-completed");
+
+  function switchCategory(category, btnId) {
+    currentCategory = category;
+    document.querySelectorAll(".changelog-buttons button").forEach(btn => btn.classList.remove("active"));
+    document.getElementById(btnId).classList.add("active");
+    displayMemos();
+  }
+
+  // Initial load
+  loadMemos();

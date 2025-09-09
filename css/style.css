@@ -166,7 +166,8 @@ body, html {
 }
 
 #page-changelog {
-  background: linear-gradient(135deg, orange, #2a5298);
+  background: linear-gradient(180deg, #0d0221, #1a1a40);
+  align-items: flex-start;
 }
 
 
@@ -455,4 +456,92 @@ h5 {
 
 .hoverable:hover {
   transform: scale(1.05); /* enlarge 5% */
+}
+
+.memo-list {
+  background: rgba(13, 2, 33, 0.8);
+  box-shadow: inset 0 0 20px #ff00ff33;
+  border-right: 2px solid #ff00ff;
+  overflow-y: auto;
+  padding: 10px;
+  width: 30%;
+}
+
+.changelog-display {
+  display: flex;
+  flex-direction: row;
+  background: repeating-linear-gradient(
+        to bottom,
+        #111,
+        #111 2px,
+        #1a1a40 4px
+      );
+  width: 100%;
+  height: 75%;
+}
+
+.memo-list .memo-item {
+  padding: 8px;
+  margin-bottom: 5px;
+  background: rgba(255, 0, 255, 0.1);
+  border: 1px solid #00ffff;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  text-shadow: 0 0 6px #00ffff;
+}
+
+.memo-list .memo-item:hover {
+  background: rgba(0, 255, 255, 0.2);
+  box-shadow: 0 0 12px #00ffff, 0 0 20px #ff00ff;
+}
+
+    /* Memo content on the right */
+.memo-content {
+  flex: 1;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  text-shadow: 0 0 6px #ff00ff;
+}
+
+.changelog-buttons {
+  display: flex;
+  background: linear-gradient(90deg, #ff00ff, #00ffff);
+  padding: 10px;
+  height: 15%;
+  box-shadow: 0 0 15px #ff00ff, 0 0 25px #00ffff;
+}
+
+.changelog-buttons button {
+  background: #555;
+  font-size: x-large;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  text-shadow: 0 0 8px #ff00ff;
+}
+
+.changelog-buttons button:hover {
+  background: rgba(255, 0, 255, 0.2);
+  box-shadow: 0 0 12px #ff00ff, 0 0 20px #00ffff;
+}
+
+
+.changelog-buttons button.active {
+  background: linear-gradient(90deg, #ff00ff, #00ffff);
+  box-shadow: 0 0 20px #ff00ff, 0 0 40px #00ffff;
+}
+
+.memo-content h2 {
+  font-size: 40px;
+}
+
+.memo-content p {
+  font-size: 30px;
+  text-align: left;
 }
