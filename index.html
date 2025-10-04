@@ -9,7 +9,6 @@
 <body>
     <div class="page-container">
         <nav>
-            <img id="light-toggle" src="assets/icons/brightness.png">
         </nav>
         <div class="background-container">
             <div class="bg-item wall"></div>
@@ -25,24 +24,49 @@
                     <div id="main-menu">
                         <div class="main-menu-options">
                             <div class="menu-item menu-box clickable hoverable" id="option-about">
-                                <img src="assets/icons/id-card.png">
+                                <div class="menu-icon">
+                                    <img src="assets/icons/id-card.png" alt="About icon">
+                                </div>
                                 <h5>About</h5>
+                                <p class="menu-subtitle">Get to know me</p>
                             </div>
                             <div class="menu-item menu-box clickable hoverable" id="option-work">
-                               <img id="option-work" src="assets/icons/portfolio.png">
+                                <div class="menu-icon">
+                                    <img src="assets/icons/portfolio.png" alt="Work icon">
+                                </div>
                                 <h5>Work</h5>
+                                <p class="menu-subtitle">Projects & Skills</p>
                             </div>
                             <div class="menu-item menu-box clickable hoverable" id="option-links">
-                                <img id="option-links" src="assets/icons/link.png">
+                                <div class="menu-icon">
+                                    <img src="assets/icons/link.png" alt="Links icon">
+                                </div>
                                 <h5>Links</h5>
+                                <p class="menu-subtitle">Social Media</p>
                             </div>
                             <div class="menu-item menu-box clickable hoverable" id="option-faq">
-                                <img id="option-links" src="assets/icons/faq.png">
-                                <h5>FAQ</h5>      
+                                <div class="menu-icon">
+                                    <img src="assets/icons/faq.png" alt="FAQ icon">
+                                </div>
+                                <h5>FAQ</h5>
+                                <p class="menu-subtitle">Common Questions</p>
                             </div>
                         </div>
                         <div class="profile-pic-block">
-                            <img class="menu-item" src="assets/images/ProfilePicCropped.jpg">
+                            <div class="profile-container">
+                                <div class="profile-image-wrapper">
+                                    <img class="profile-image" src="assets/images/ProfilePicCropped.jpg" alt="Brandon Weber">
+                                    <div class="profile-ring"></div>
+                                    <div class="profile-status">
+                                        <span class="status-dot"></span>
+                                        <span class="status-text">Available</span>
+                                    </div>
+                                </div>
+                                <div class="profile-info">
+                                    <h3 class="profile-name">Brandon Weber</h3>
+                                    <p class="profile-title">Professional Software Developer</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div id="bottom-menu">
@@ -51,7 +75,7 @@
                                 <div class="marquee__inner">
                                     <span>Howdy! I'm Brandon Weber, and I probably just told you to stop by here...</span>
                                     <span>  Howdy! I'm Brandon Weber, and I probably just told you to stop by here...</span>
-                                </div>    
+                                </div>
                            </div>
                         </div>
                         <div class="menu-item menu-circle clickable hoverable" id="option-contact">
@@ -62,27 +86,119 @@
                         </div>
                     </div>
                 </div>
-                <div class="tv-screen" id="page-info">
+                <div class="tv-screen" id="page-info" role="main" aria-label="About Brandon Weber">
                     <div id="info-left-column">
-                        <div class="about-profile-circle-slideshow menu-item">
-                            <img src="assets/images/ProfilePicCropped.jpg" alt="prof-pic-1">
-                            <img src="assets/images/90sGuyCropped.jpg" alt="prof-pic-2">
+                        <div class="about-profile-circle-slideshow menu-item" role="img" aria-label="Brandon Weber profile photos slideshow">
+                            <img src="assets/images/ProfilePicCropped.jpg" alt="Brandon Weber professional headshot">
+                            <img src="assets/images/90sGuyCropped.jpg" alt="Brandon Weber in 90s style casual photo">
                         </div>
                         <h4>Brandon Weber</h4>
                         <p>Texas-based Software Developer</p>
-                        <p>Currently Work at: <a href="quarterhill.com">Quarterhill</a></p>
+                        <div class="company-info">
+                            <p>Currently Work at:</p>
+                            <a href="https://quarterhill.com" target="_blank" rel="noopener noreferrer" class="company-link">
+                                <span class="company-name">Quarterhill</span>
+                                <span class="external-link-icon">🔗</span>
+                            </a>
+                        </div>
                     </div>
                     <div id="info-right-column">
                         <div id="info-text-block">
-                        <p id="info-text">Howdy! I’m Brandon K. Weber. I started this website to teach myself front end web development. This website serves as a landing page for everything I’m up to. Interested in working with me? Send me an email at brandon@bkweber.com QUICK BRANDON FACTS Primarily Backend Focused: Java Spring Boot, PostgreSQL, Python Google Cloud Professional BS in Computer Science, Vanderbilt University OTHER INTERESTS Singing & Guitar Pickleball Tennis Embedded Systems Personal Fitness Personal Finance Gaming Travel (I want to do more!) Light Mode PHOTOS</p>
+                            <div class="about-section">
+                                <p class="intro-text">Howdy! I’m Brandon K. Weber. I started this website to teach myself front end web development. This website serves as a landing page for everything I’m up to.</p>
+                                <p class="contact-text">Interested in working with me? Send me an email at <a href="mailto:brandon@bkweber.com">brandon@bkweber.com</a></p>
+                            </div>
+
+                            <div class="about-section">
+                                <h5 class="section-title">TECHNICAL SKILLS</h5>
+                                <div class="skills-container">
+                                    <div class="skill-item">
+                                        <div class="skill-info">
+                                            <span class="skill-name">Java Spring Boot</span>
+                                            <span class="skill-level">90%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-progress" data-skill="90"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <div class="skill-info">
+                                            <span class="skill-name">PostgreSQL</span>
+                                            <span class="skill-level">85%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-progress" data-skill="85"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <div class="skill-info">
+                                            <span class="skill-name">Python</span>
+                                            <span class="skill-level">80%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-progress" data-skill="80"></div>
+                                        </div>
+                                    </div>
+                                    <div class="skill-item">
+                                        <div class="skill-info">
+                                            <span class="skill-name">Google Cloud</span>
+                                            <span class="skill-level">75%</span>
+                                        </div>
+                                        <div class="skill-bar">
+                                            <div class="skill-progress" data-skill="75"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="education-info">
+                                    <p class="education-text">🎓 BS in Computer Science, Vanderbilt University</p>
+                                </div>
+                            </div>
+
+                            <div class="about-section">
+                                <h5 class="section-title">FUN FACTS & INTERESTS</h5>
+                                <div class="fun-facts-grid">
+                                    <div class="fun-fact-item">
+                                        <span class="fact-icon">🎸</span>
+                                        <span class="fact-text">Singing & Guitar</span>
+                                    </div>
+                                    <div class="fun-fact-item">
+                                        <span class="fact-icon">🏓</span>
+                                        <span class="fact-text">Pickleball Pro</span>
+                                    </div>
+                                    <div class="fun-fact-item">
+                                        <span class="fact-icon">🎾</span>
+                                        <span class="fact-text">Tennis Player</span>
+                                    </div>
+                                    <div class="fun-fact-item">
+                                        <span class="fact-icon">🔧</span>
+                                        <span class="fact-text">Embedded Systems</span>
+                                    </div>
+                                    <div class="fun-fact-item">
+                                        <span class="fact-icon">💪</span>
+                                        <span class="fact-text">Fitness Enthusiast</span>
+                                    </div>
+                                    <div class="fun-fact-item">
+                                        <span class="fact-icon">💰</span>
+                                        <span class="fact-text">Finance Nerd</span>
+                                    </div>
+                                    <div class="fun-fact-item">
+                                        <span class="fact-icon">🎮</span>
+                                        <span class="fact-text">Retro Gamer</span>
+                                    </div>
+                                    <div class="fun-fact-item">
+                                        <span class="fact-icon">✈️</span>
+                                        <span class="fact-text">Future Traveler</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div id="infinite-photo-slideshow">
                             <div class="marquee">
                                 <div class="marquee__inner">
                                     <span>Photo Slideshow now</span>
                                     <span>Photo Slideshow now</span>
-                                </div>    
-                           </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="back-button menu-item clickable hoverable">
@@ -215,7 +331,6 @@
         </div>
         <footer>© 2025 Brandon Weber</footer>
     </div>
-    <div class="music-man"></div>
     <audio id="click-sound" src="assets/sounds/wii-click.mp3" preload="auto"></audio>
     <audio id="hover-sound" src="assets/sounds/wii-hover.mp3" preload="auto"></audio>
     <script src="js/script.js"></script>

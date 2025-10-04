@@ -43,7 +43,10 @@ document.querySelectorAll('.clickable').forEach(el => {
 
 /* TODO: Clean this up */
 const aboutMenuBtn = document.getElementById("option-about");
-aboutMenuBtn.addEventListener("click", () => showPage("page-info"));
+aboutMenuBtn.addEventListener("click", () => {
+  showPage("page-info");
+  setTimeout(animateSkillBars, 300); // Animate after page transition
+});
 const workMenuBtn = document.getElementById("option-work");
 workMenuBtn.addEventListener("click", () => showPage("page-work"));
 const linksMenuBtn = document.getElementById("option-links");
@@ -67,9 +70,31 @@ function showNextSlide() {
 
 // start slideshow
 slides[index].classList.add('active');
-setInterval(showNextSlide, 7500); // change every 3s
+setInterval(showNextSlide, 7500); // change every 7.5s
 
-showPage('page-info');
+/* Skill Bar Animation */
+function animateSkillBars() {
+  const skillBars = document.querySelectorAll('.skill-progress');
+  skillBars.forEach(bar => {
+    const skillLevel = bar.getAttribute('data-skill');
+    bar.style.width = skillLevel + '%';
+  });
+}
+
+/* Keyboard Navigation for Photo Slideshow */
+document.addEventListener('DOMContentLoaded', function() {
+  const indicators = document.querySelectorAll('.indicator');
+  indicators.forEach((indicator, index) => {
+    indicator.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        currentPhotoSlide(index + 1);
+      }
+    });
+  });
+});
+
+showPage('page-landing');
 
 //Changelog
   let memos = [];
