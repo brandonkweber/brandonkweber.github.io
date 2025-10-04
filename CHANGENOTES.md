@@ -7,12 +7,12 @@
 ### [Unreleased] 🚧
 *Features in progress or planned for upcoming versions:*
 - [ ] Make More Mobile Friendly Layout
-- [ ] About Page - Super Mario World Theme
+- [ ] About Page - PokeDex
 - [ ] Work Page - Animal Crossing Theme
 - [ ] FAQ Page - Kirby Theme
 - [ ] Links Page - Legend of Zelda Theme
 - [ ] Contact Page - Wario Ware Theme
-- [ ] Changelog Page - RPG - PokeDex
+- [ ] Changelog Page - RPG Menu
 - [ ] HomePage - Wii Menu
 - [ ] General
   - [ ] Wii SFX and Music
