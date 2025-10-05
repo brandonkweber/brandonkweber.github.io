@@ -1,251 +1,791 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>bkweber.com</title>
-  <link href="css/index.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/markdown-it/dist/markdown-it.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brandon's Room</title>
+    <link rel="stylesheet" href="css/style.css">
+</script>
 </head>
-
-
 <body>
+    <div class="page-container">
+        <div class="background-container">
+        </div>
+        <div class="foreground-container">
+            <div class="sensor-bar"></div>
+            <div class="tv-container">
+                <div class="tv-screen" id="page-landing">
+                    <div id="main-menu">
+                        <div class="main-menu-options">
+                            <div class="menu-item menu-box clickable hoverable" id="option-about">
+                                <div class="menu-icon">
+                                    <img src="assets/icons/id-card.png" alt="About icon">
+                                </div>
+                                <h5>About</h5>
+                                <p class="menu-subtitle">Get to know me</p>
+                            </div>
+                            <div class="menu-item menu-box clickable hoverable" id="option-work">
+                                <div class="menu-icon">
+                                    <img src="assets/icons/portfolio.png" alt="Work icon">
+                                </div>
+                                <h5>Work</h5>
+                                <p class="menu-subtitle">Projects & Skills</p>
+                            </div>
+                            <div class="menu-item menu-box clickable hoverable" id="option-links">
+                                <div class="menu-icon">
+                                    <img src="assets/icons/link.png" alt="Links icon">
+                                </div>
+                                <h5>Links</h5>
+                                <p class="menu-subtitle">Social Media</p>
+                            </div>
+                            <div class="menu-item menu-box clickable hoverable" id="option-faq">
+                                <div class="menu-icon">
+                                    <img src="assets/icons/faq.png" alt="FAQ icon">
+                                </div>
+                                <h5>FAQ</h5>
+                                <p class="menu-subtitle">Common Questions</p>
+                            </div>
+                        </div>
 
-    <div id="loading-screen" style="position: fixed; width: 100%; height: 100%; background: #000; color: #fff; display: flex; justify-content: center; align-items: center;">
-        <p>Loading... <br> Version 1.0.0</p>
-    </div>
-    
-    <script>
-        setTimeout(() => {
-            document.getElementById('loading-screen').style.display = 'none';
-            document.getElementById('profile-picture').style.display = 'block';
-        }, 1000);
-    </script>
-    
-
-    <div class="container">
-        <img src="images/3d saucer.gif" class="saucer" id="saucer">
-        <div class="left-box">
-            <div class="box">
-                <div class = "changelog">
-                    <h2 class="update">CHANGELOG</h2>
-                    <h3>Version 1.0.0</h3>
-                    <ul>
-                        <li>
-                            Added basic, extensible format
-                        </li>
-                        <li>
-                            Added basic presentation
-                        </li>
-                        <li>
-                            Made website mobile compatible
-                        </li>
-                        <li>
-                            Added basic profile
-                        </li>
-                    </ul>
-                    <h3>Upcoming Changes</h3>
-                    <ul>
-                        <li>
-                            Add Music Player
-                        </li>
-                        <li>
-                            Add Site Metrics
-                        </li>
-                        <li>
-                            Add Live Chat
-                        </li>
-                        <li>
-                            Add Easter Eggs
-                        </li>
-                        <li>
-                            Add Blog
-                        </li>
-                        <li>
-                            Add Banner
-                        </li>
-                        <li>
-                            Flesh out the "space"!
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="box">
-                <div class = "chat">
-                    <div class="chat-box">
-                        <div class="chat-header">Transmit a Message!</div>
-                        <div class="chat-body">
-                          <div class="messages" id="messages"></div>
-                          <div class="chat-input">
-                            <input type="text" id="chatInput" placeholder="Type Here..." />
-                            <button id="sendBtn">Send</button>
-                          </div>
+                        <div class="profile-pic-block">
+                            <div class="profile-container">
+                                <div class="profile-image-wrapper">
+                                    <img class="profile-image clickable hoverable" onclick="showPage('page-landing')" src="assets/images/ProfilePicCropped.jpg" alt="Brandon Weber">
+                                    <div class="profile-ring"></div>
+                                    <div class="profile-status">
+                                        <span class="status-dot"></span>
+                                        <span class="status-text">Available</span>
+                                    </div>
+                                </div>
+                                <div class="profile-info">
+                                    <h4 class="profile-name">Brandon Weber</h4>
+                                    <p class="profile-title">Professional Software Developer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="bottom-menu">
+                        <div class="menu-item scroll-news-container">
+                            <div class="marquee">
+                                <div class="marquee__inner">
+                                    <span>Howdy! I'm Brandon Weber, and I probably just told you to stop by here...</span>
+                                    <span>  Howdy! I'm Brandon Weber, and I probably just told you to stop by here...</span>
+                                </div>
+                           </div>
+                        </div>
+                        <div class="menu-item menu-circle clickable hoverable" id="option-contact">
+                            <div class="menu-icon">
+                                <img src="assets/icons/email.png" alt="Contact icon">
+                            </div>
+                            <h5>Contact</h5>
+                            <p class="menu-subtitle">Get In Touch</p>
+                        </div>
+                        <div class="menu-item menu-circle clickable hoverable" id="option-changelog">
+                            <div class="menu-icon">
+                                <img src="assets/icons/file.png" alt="Changelog icon">
+                            </div>
+                            <h5>Changelog</h5>
+                            <p class="menu-subtitle">Updates & News</p>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        
-        <div class="main-box">
-            <div class="box">
-                <img src="images/ProfilePic.gif" alt="Profile Picture" class="profile-picture" id="profile-picture">
-                <div class="about-me">
-                    <h2>HOWDY, TRAVELER...</h2>
-                    <p>
-                        My name is Brandon K. Weber. I started this website to teach myself front end web development. This website serves as a landing page for everything I'm up to.
-                    </p>
-                    <br>
-                    <p>Quick Brandon Facts:</p>
-                    <ul>
-                        <li>
-                            I'm from Texas...YEEHAW! 🤠🐄👦
-                        </li>
-                        <li>
-                            I will probably bring up pickleball every time we talk to each other.
-                        </li>
-                        <li>
-                            Master ranked TFT enjoyer (children's game i know).
-                        </li>
-                        <li>
-                            Vanderbilt Alum
-                        </li>
-                        <li>
-                            My main programming languages are Java and python, but I want to learn more!!!
-                        </li>
-                        <li>
-                            Contact me for any requests (use 
-                            <a href="mailto:bkweber@bkweber.com">email</a>).
-                        </li>
-                    </ul>
-                    <!-- <h2>Happy Birthday, Brittany!</h2>
-                    <p>
-                        Shoutout to my sister for her birthday! Don't worry this will be reverted by EOD tomorrow.
-                    </p>
-                    <br>
-                    <p>Quick Brittany Facts:</p>
-                    <ul>
-                        <li>
-                            She's from Texas...YEEHAW! 🤠
-                        </li>
-                        <li>
-                            She's in a band! 🎸🎤
-                        </li>
-                        <li>
-                            All around great person 🌈.
-                        </li>
-                    </ul> -->
-                </div>
-            </div>
-            <div class="box">
-                <div class="projects">
-                    <h2>FUN PROJECTS</h2>
-                    <a target="_blank" rel=""nofollow" href="https://github.com/brandonkweber">
-                        <h3>PickleBrawl GO 🥒🥊 - ETA ... who knows...</h3>
-                    </a>
-                    <p>A Pickleball Tournament/Event Management System: live bracket updates, real-time score updates, automatic bracket creation.</p>
-                    <a target="_blank" rel=""nofollow" href="https://github.com/brandonkweber">
-                        <h3>MyHotSpot 🔥🗺️ (Coming Soon)</h3>
-                    </a>
-                    <p>Review your historical map data, curate your hotspots, let AI describe your personality based on your behavior and share on social media</p>
-                    <a target="_blank" rel=""nofollow" href="https://github.com/brandonkweber">
-                        <h3>Midye 🎹🖌️ (Coming Soon)</h3>
-                    </a>
-                    <p>In response to different frequency and velocity, use MS Paint to illustrate your music!</p>
-                </div>
-            </div>
-            <div class="box">
-                <div class="projects">
-                    <h2>TECHNICAL PROJECTS</h2>
-                    <a target="_blank" rel=""nofollow" href="https://github.com/brandonkweber">
-                        <h3>Java Tasks ☕📝 - ETA... who knows....</h3>
-                    </a>
-                    <p>Web-Based Task Management System: Spring Boot + Java + SQL + Flyway</p>
-                    <a target="_blank" rel=""nofollow" href="https://github.com/brandonkweber">
-                        <h3>Python ML Thing 🐍🐑 (Coming Soon)</h3>
-                    </a>
-                    <p>Idk something with python</p>
-                    <a target="_blank" rel=""nofollow" href="https://github.com/brandonkweber">
-                        <h3>Golang Thing (Coming Soon)</h3>
-                    </a>
-                    <p>Something with Go(lang)</p>
-                </div>
-            </div>
-            <div class="box">
-                <canvas id="gameCanvas"></canvas>
-            </div>
-        </div>
-        
-        <div class="right-box">
-            <div class="box">
-                <div class="right-contacts-panel">
-                    <h2>CONTACT ME</h2> 
-                    <ul style="margin-right: 34px;">
-                        <li>
-                            <a href="mailto:brandon@bkweber.com" target="_blank" style="text-decoration: none; color: inherit;">
-                                Email 🚀
-                            </a>     
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/in/brandon-weber-75244414b/" target="_blank" style="text-decoration: none; color: inherit;">
-                                LinkedIn 🧑‍🚀
-                            </a>  
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/loafuscrumbwell/" target="_blank" style="text-decoration: none; color: inherit;">
-                                Instagram ❤️
+                <div class="tv-screen" id="page-info" role="main" aria-label="About Brandon Weber">
+                    <div id="info-left-column">
+                        <div class="about-profile-circle-slideshow menu-item" role="img" aria-label="Brandon Weber profile photos slideshow">
+                            <img src="assets/images/ProfilePicCropped.jpg" alt="Brandon Weber professional headshot">
+                            <img src="assets/images/90sGuyCropped.jpg" alt="Brandon Weber in 90s style casual photo">
+                            <img src="assets/images/poolbrandoncropped.jpg" alt="Brandon Weber in da pool">
+                        </div>
+                        <h4>Brandon Weber</h4>
+                        <p>Professional Software Developer</p>
+                        <div class="company-info">
+                            <p>Currently Work at:</p>
+                            <a href="https://quarterhill.com" target="_blank" rel="noopener noreferrer" class="company-link">
+                                <span class="company-name">Quarterhill</span>
+                                <span class="external-link-icon">🔗</span>
                             </a>
-                        </li>
-                    </ul>
-    
+                        </div>
+                    </div>
+                    <div id="info-right-column">
+                        <div id="info-text-block">
+                            <div class="about-section">
+                                <p class="intro-text">Howdy! I’m Brandon K. Weber. I started this website to teach myself front end web development. Check out this site to see everything I’m up to.</p>
+                                <p class="contact-text">Interested in working with me? Send me an email at <a href="mailto:brandon@bkweber.com">brandon@bkweber.com</a></p>
+                            </div>
+
+                            <div class="about-section">
+                                <h5 class="section-title">💻 TECHNICAL SKILLS</h5>
+                                <div class="skills-list">
+                                    <div class="skill-item" data-skill="java">
+                                        <span class="skill-icon">☕</span>
+                                        <span class="skill-name">Java Spring Boot</span>
+                                        <span class="skill-level">Advanced</span>
+                                    </div>
+
+                                    <div class="skill-item" data-skill="python">
+                                        <span class="skill-icon">🐍</span>
+                                        <span class="skill-name">Python</span>
+                                        <span class="skill-level">Intermediate</span>
+                                    </div>
+
+                                    <div class="skill-item" data-skill="gcp">
+                                        <span class="skill-icon">☁️</span>
+                                        <span class="skill-name">Google Cloud</span>
+                                        <span class="skill-level">Intermediate</span>
+                                    </div>
+
+                                    <div class="skill-item" data-skill="elastic">
+                                        <span class="skill-icon">🔍</span>
+                                        <span class="skill-name">Elastic</span>
+                                        <span class="skill-level">Intermediate</span>
+                                    </div>
+
+                                    <div class="skill-item" data-skill="looker">
+                                        <span class="skill-icon">📊</span>
+                                        <span class="skill-name">Looker</span>
+                                        <span class="skill-level">Intermediate</span>
+                                    </div>
+
+                                    <div class="skill-item" data-skill="react">
+                                        <span class="skill-icon">⚛️</span>
+                                        <span class="skill-name">React</span>
+                                        <span class="skill-level">Novice</span>
+                                    </div>
+                                </div>
+                                <h5 class="section-title">EDUCATION</h5>
+                                <div class="education-info">
+                                    <p class="education-text">🎓 BS in Computer Science, Vanderbilt University</p>
+                                </div>
+                            </div>
+
+                            <div class="about-section">
+                                <h5 class="section-title">OTHER FUN FACTS & INTERESTS</h5>
+                                <div class="fun-facts-grid">
+                                    <div class="fun-fact-item">
+                                        <span class="fact-icon">🎤</span>
+                                        <span class="fact-text">Karaoke Enthusiast</span>
+                                    </div>
+                                    <div class="fun-fact-item">
+                                        <span class="fact-icon">🥒</span>
+                                        <span class="fact-text">Pickleball Player</span>
+                                    </div>
+                                    <div class="fun-fact-item">
+                                        <span class="fact-icon">🎾</span>
+                                        <span class="fact-text">Tennis Player</span>
+                                    </div>
+                                    <div class="fun-fact-item">
+                                        <span class="fact-icon">🔧</span>
+                                        <span class="fact-text">Embedded Systems</span>
+                                    </div>
+                                    <div class="fun-fact-item">
+                                        <span class="fact-icon">🎸</span>
+                                        <span class="fact-text">Guitar Guy</span>
+                                    </div>
+                                    <div class="fun-fact-item">
+                                        <span class="fact-icon">🎮</span>
+                                        <span class="fact-text">Game Modder</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="tv-screen" id="page-work">
+                    <div class="work-container">
+                        <!-- Header Section -->
+                        <div class="work-header">
+                            <h2>Work & Projects</h2>
+                            <div class="work-intro-section">
+                                <div class="work-blurb">
+                                    <p><strong>Accepting work offers via my work email!</strong></p>
+                                    <p>I coach pickleball and do web/app development.</p>
+                                </div>
+                                <div class="resume-download">
+                                    <a href="#" class="resume-btn" onclick="alert('Resume download coming soon!')">
+                                        <span class="resume-icon">📄</span>
+                                        <span class="resume-text">Download Resume</span>
+                                        <span class="resume-arrow">↓</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Tools Section -->
+                        <div class="work-section">
+                            <h3>Tools I've Used</h3>
+                            <div class="tools-grid">
+                                <div class="tool-item">
+                                    <span class="tool-icon">💻</span>
+                                    <span class="tool-name">VS Code</span>
+                                </div>
+                                <div class="tool-item">
+                                    <span class="tool-icon">🐙</span>
+                                    <span class="tool-name">GitHub</span>
+                                </div>
+                                <div class="tool-item">
+                                    <span class="tool-icon">🐳</span>
+                                    <span class="tool-name">Docker</span>
+                                </div>
+                                <div class="tool-item">
+                                    <span class="tool-icon">☁️</span>
+                                    <span class="tool-name">AWS</span>
+                                </div>
+                                <div class="tool-item">
+                                    <span class="tool-icon">🔍</span>
+                                    <span class="tool-name">Elastic</span>
+                                </div>
+                                <div class="tool-item">
+                                    <span class="tool-icon">📊</span>
+                                    <span class="tool-name">Looker</span>
+                                </div>
+                                <div class="tool-item">
+                                    <span class="tool-icon">🗄️</span>
+                                    <span class="tool-name">PostgreSQL</span>
+                                </div>
+                                <div class="tool-item">
+                                    <span class="tool-icon">🔧</span>
+                                    <span class="tool-name">Postman</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Development Frameworks Section -->
+                        <div class="work-section">
+                            <h3>Development Frameworks</h3>
+                            <div class="frameworks-grid">
+                                <div class="framework-item">
+                                    <span class="framework-icon">☕</span>
+                                    <span class="framework-name">Spring Boot</span>
+                                </div>
+                                <div class="framework-item">
+                                    <span class="framework-icon">⚛️</span>
+                                    <span class="framework-name">React</span>
+                                </div>
+                                <div class="framework-item">
+                                    <span class="framework-icon">🅰️</span>
+                                    <span class="framework-name">Angular</span>
+                                </div>
+                                <div class="framework-item">
+                                    <span class="framework-icon">🟢</span>
+                                    <span class="framework-name">Node.js</span>
+                                </div>
+                                <div class="framework-item">
+                                    <span class="framework-icon">🐍</span>
+                                    <span class="framework-name">Django</span>
+                                </div>
+                                <div class="framework-item">
+                                    <span class="framework-icon">🔥</span>
+                                    <span class="framework-name">Firebase</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Programming Languages Section -->
+                        <div class="work-section">
+                            <h3>Programming Languages</h3>
+                            <div class="languages-grid">
+                                <div class="language-item">
+                                    <span class="language-icon">☕</span>
+                                    <span class="language-name">Java</span>
+                                </div>
+                                <div class="language-item">
+                                    <span class="language-icon">🟨</span>
+                                    <span class="language-name">JavaScript</span>
+                                </div>
+                                <div class="language-item">
+                                    <span class="language-icon">🐍</span>
+                                    <span class="language-name">Python</span>
+                                </div>
+                                <div class="language-item">
+                                    <span class="language-icon">💙</span>
+                                    <span class="language-name">TypeScript</span>
+                                </div>
+                                <div class="language-item">
+                                    <span class="language-icon">🎨</span>
+                                    <span class="language-name">CSS/HTML</span>
+                                </div>
+                                <div class="language-item">
+                                    <span class="language-icon">🗄️</span>
+                                    <span class="language-name">SQL</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Projects Section -->
+                        <div class="work-section">
+                            <h3>Featured Projects</h3>
+                            <div class="projects-container">
+                                <div class="project-item">
+                                    <div class="project-image">
+                                        <img src="assets/images/project-portfolio.jpg" alt="Portfolio Website" onerror="this.src='assets/images/90sGuyCropped.jpg'">
+                                    </div>
+                                    <div class="project-content">
+                                        <h4>Personal Portfolio Website</h4>
+                                        <p>A retro Nintendo Wii-themed portfolio website built with HTML, CSS, and JavaScript. Features responsive design, interactive animations, and a unique gaming aesthetic.</p>
+                                        <div class="project-buttons">
+                                            <a href="https://github.com/brandonkweber/brandonkweber.github.io" target="_blank" class="project-btn repo-btn">
+                                                <span class="btn-icon">📂</span>
+                                                <span class="btn-text">Repository</span>
+                                            </a>
+                                            <a href="#" class="project-btn article-btn" onclick="alert('Medium article coming soon!')">
+                                                <span class="btn-icon">📝</span>
+                                                <span class="btn-text">Article</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="project-item">
+                                    <div class="project-image">
+                                        <img src="assets/images/project-ecommerce.jpg" alt="E-commerce Platform" onerror="this.src='assets/images/90sGuyCropped.jpg'">
+                                    </div>
+                                    <div class="project-content">
+                                        <h4>E-commerce Platform</h4>
+                                        <p>Full-stack e-commerce solution built with Spring Boot backend and React frontend. Features user authentication, payment processing, and inventory management.</p>
+                                        <div class="project-buttons">
+                                            <a href="#" class="project-btn repo-btn" onclick="alert('Repository link coming soon!')">
+                                                <span class="btn-icon">📂</span>
+                                                <span class="btn-text">Repository</span>
+                                            </a>
+                                            <a href="#" class="project-btn article-btn" onclick="alert('Medium article coming soon!')">
+                                                <span class="btn-icon">📝</span>
+                                                <span class="btn-text">Article</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="project-item">
+                                    <div class="project-image">
+                                        <img src="assets/images/project-analytics.jpg" alt="Data Analytics Dashboard" onerror="this.src='assets/images/90sGuyCropped.jpg'">
+                                    </div>
+                                    <div class="project-content">
+                                        <h4>Data Analytics Dashboard</h4>
+                                        <p>Interactive dashboard for data visualization using Python, Elastic Search, and Looker. Processes large datasets and provides real-time insights for business intelligence.</p>
+                                        <div class="project-buttons">
+                                            <a href="#" class="project-btn repo-btn" onclick="alert('Repository link coming soon!')">
+                                                <span class="btn-icon">📂</span>
+                                                <span class="btn-text">Repository</span>
+                                            </a>
+                                            <a href="#" class="project-btn article-btn" onclick="alert('Medium article coming soon!')">
+                                                <span class="btn-icon">📝</span>
+                                                <span class="btn-text">Article</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Professional Experience Section -->
+                        <div class="work-section">
+                            <h3>Professional Development Experience</h3>
+                            <div class="experience-container">
+                                <div class="experience-item">
+                                    <div class="experience-header">
+                                        <h4>Senior Software Developer</h4>
+                                        <span class="experience-period">2022 - Present</span>
+                                    </div>
+                                    <div class="experience-company">Tech Solutions Inc.</div>
+                                    <div class="experience-description">
+                                        <p>Lead development of enterprise-scale web applications using Java Spring Boot and React. Managed a team of 4 developers and implemented CI/CD pipelines that reduced deployment time by 60%.</p>
+                                        <ul>
+                                            <li>Architected microservices handling 1M+ daily requests</li>
+                                            <li>Implemented automated testing reducing bugs by 40%</li>
+                                            <li>Mentored junior developers and conducted code reviews</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="experience-item">
+                                    <div class="experience-header">
+                                        <h4>Full Stack Developer</h4>
+                                        <span class="experience-period">2020 - 2022</span>
+                                    </div>
+                                    <div class="experience-company">Digital Innovations LLC</div>
+                                    <div class="experience-description">
+                                        <p>Developed and maintained multiple client-facing applications using modern web technologies. Collaborated with UX/UI designers to create responsive and accessible user interfaces.</p>
+                                        <ul>
+                                            <li>Built 15+ responsive web applications</li>
+                                            <li>Integrated third-party APIs and payment systems</li>
+                                            <li>Optimized database queries improving performance by 35%</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="experience-item">
+                                    <div class="experience-header">
+                                        <h4>Junior Software Engineer</h4>
+                                        <span class="experience-period">2018 - 2020</span>
+                                    </div>
+                                    <div class="experience-company">StartupTech Co.</div>
+                                    <div class="experience-description">
+                                        <p>Started career developing internal tools and customer-facing features. Gained experience in agile development methodologies and modern software engineering practices.</p>
+                                        <ul>
+                                            <li>Contributed to 20+ feature releases</li>
+                                            <li>Participated in daily standups and sprint planning</li>
+                                            <li>Learned best practices for code quality and testing</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="tv-screen" id="page-links">
+                    <div class="links-header">
+                        <h2>Connect & Follow</h2>
+                        <p>Find me across the digital universe</p>
+                    </div>
+
+                    <div class="links-grid">
+                        <div class="link-channel" data-platform="linkedin">
+                            <div class="channel-icon">
+                                <span class="emoji-icon">💼</span>
+                            </div>
+                            <div class="channel-info">
+                                <h3>LinkedIn</h3>
+                                <p>Professional Network</p>
+                                <div class="channel-stats">
+                                    <span class="stat-label">Connections</span>
+                                    <span class="stat-value">500+</span>
+                                </div>
+                            </div>
+                            <a href="https://linkedin.com/in/brandonkweber" target="_blank" class="channel-button">
+                                <span class="button-text">Connect</span>
+                                <span class="button-arrow">→</span>
+                            </a>
+                        </div>
+
+                        <div class="link-channel" data-platform="instagram">
+                            <div class="channel-icon">
+                                <span class="emoji-icon">📸</span>
+                            </div>
+                            <div class="channel-info">
+                                <h3>Instagram</h3>
+                                <p>Life & Adventures</p>
+                                <div class="channel-stats">
+                                    <span class="stat-label">Posts</span>
+                                    <span class="stat-value">50+</span>
+                                </div>
+                            </div>
+                            <a href="https://instagram.com/brandonkweber" target="_blank" class="channel-button">
+                                <span class="button-text">Follow</span>
+                                <span class="button-arrow">→</span>
+                            </a>
+                        </div>
+
+                        <div class="link-channel" data-platform="github">
+                            <div class="channel-icon">
+                                <span class="emoji-icon">⚙️</span>
+                            </div>
+                            <div class="channel-info">
+                                <h3>GitHub</h3>
+                                <p>Code Repository</p>
+                                <div class="channel-stats">
+                                    <span class="stat-label">Repos</span>
+                                    <span class="stat-value">25+</span>
+                                </div>
+                            </div>
+                            <a href="https://github.com/brandonkweber" target="_blank" class="channel-button">
+                                <span class="button-text">Explore</span>
+                                <span class="button-arrow">→</span>
+                            </a>
+                        </div>
+
+                        <div class="link-channel" data-platform="resume">
+                            <div class="channel-icon">
+                                <span class="emoji-icon">📋</span>
+                            </div>
+                            <div class="channel-info">
+                                <h3>Resume</h3>
+                                <p>Professional CV</p>
+                                <div class="channel-stats">
+                                    <span class="stat-label">Updated</span>
+                                    <span class="stat-value">2024</span>
+                                </div>
+                            </div>
+                            <a href="#" class="channel-button" onclick="alert('Resume download coming soon!')">
+                                <span class="button-text">Download</span>
+                                <span class="button-arrow">→</span>
+                            </a>
+                        </div>
+
+                        <div class="link-channel" data-platform="contact">
+                            <div class="channel-icon">
+                                <span class="emoji-icon">💌</span>
+                            </div>
+                            <div class="channel-info">
+                                <h3>Contact Form</h3>
+                                <p>Get In Touch</p>
+                                <div class="channel-stats">
+                                    <span class="stat-label">Form</span>
+                                    <span class="stat-value">Quick</span>
+                                </div>
+                            </div>
+                            <a href="#" class="channel-button" onclick="showPage('page-contact')">
+                                <span class="button-text">Contact</span>
+                                <span class="button-arrow">→</span>
+                            </a>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="tv-screen" id="page-faq">
+                    <div class="faq-header">
+                        <h2>Frequently Asked Questions</h2>
+                        <p>Got questions? I've got answers!</p>
+                    </div>
+
+                    <div class="faq-container">
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <span class="question-text">Why the retro Wii theme?</span>
+                                <span class="expand-icon">▶</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>The Nintendo Wii represents a time of innovation and fun in gaming! I wanted my portfolio to capture that same spirit of creativity and nostalgia. Plus, who doesn't love the satisfying click sounds and smooth animations of the Wii menu?</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <span class="question-text">How did you build this website?</span>
+                                <span class="expand-icon">▶</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p><strong>Tech Stack:</strong></p>
+                                <ul>
+                                    <li>🌐 <strong>Frontend:</strong> Pure HTML, CSS, and JavaScript (no frameworks!)</li>
+                                    <li>🎨 <strong>Styling:</strong> Custom CSS with animations and glassmorphism effects</li>
+                                    <li>🚀 <strong>Deployment:</strong> GitHub Pages for free hosting</li>
+                                    <li>🎵 <strong>Audio:</strong> Original Wii sound effects for authenticity</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <span class="question-text">What technologies do you work with?</span>
+                                <span class="expand-icon">▶</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p><strong>My main tech stack includes:</strong></p>
+                                <ul>
+                                    <li>☕ <strong>Backend:</strong> Java with Spring Boot framework</li>
+                                    <li>🗄️ <strong>Database:</strong> PostgreSQL for robust data management</li>
+                                    <li>🐍 <strong>Scripting:</strong> Python for automation and data analysis</li>
+                                    <li>☁️ <strong>Cloud:</strong> Google Cloud Platform (GCP) services</li>
+                                    <li>🌐 <strong>Frontend:</strong> HTML, CSS, JavaScript, and modern frameworks</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <span class="question-text">Are you really into gaming?</span>
+                                <span class="expand-icon">▶</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Absolutely! Gaming has been a huge part of my life and actually inspired me to get into programming. I love everything from retro Nintendo classics to modern indie games. The problem-solving skills from gaming translate perfectly to software development!</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <span class="question-text">How can I get in touch?</span>
+                                <span class="expand-icon">▶</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>I'd love to hear from you! You can reach me through:</p>
+                                <ul>
+                                    <li>📬 <strong>Email:</strong> brandon@bkweber.com</li>
+                                    <li>💼 <strong>LinkedIn:</strong> Connect with me professionally</li>
+                                    <li>📱 <strong>Contact Form:</strong> Use the contact page for quick messages</li>
+                                </ul>
+                                <p>I typically respond within 24 hours!</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFAQ(this)">
+                                <span class="question-text">Are you available for new opportunities?</span>
+                                <span class="expand-icon">▶</span>
+                            </div>
+                            <div class="faq-answer">
+                                <p>I'm always open to discussing exciting opportunities! Whether it's a full-time position, consulting work, or an interesting project collaboration, feel free to reach out. I'm particularly interested in roles involving backend development, cloud architecture, and innovative tech solutions.</p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="tv-screen" id="page-contact">
+                    <div class="contact-container">
+                        <div class="contact-header">
+                            <h2>Contact Brandon</h2>
+                            <p>Send me a message and I'll get back to you!</p>
+                        </div>
+
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label for="subject">Subject:</label>
+                                <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="body">Message:</label>
+                                <textarea id="body" name="body" rows="8" placeholder="Tell me what's on your mind..." required></textarea>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="send-button">
+                                    <span class="button-icon">📤</span>
+                                    Send Email
+                                </button>
+                                <button type="button" class="clear-button" onclick="clearForm()">
+                                    <span class="button-icon">🗑️</span>
+                                    Clear
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+
+
+                </div>
+                <div class="tv-screen" id="page-changelog">
+                    <div class="changelog-header">
+                        <h2>Changelog & Updates</h2>
+                        <div class="player-stats">
+                            <div class="stat-item">
+                                <span class="stat-icon">⚡</span>
+                                <span class="stat-label">Level</span>
+                                <span class="stat-value">25</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-icon">🏆</span>
+                                <span class="stat-label">XP</span>
+                                <span class="stat-value">15,420</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="quest-tabs">
+                        <button class="quest-tab active" data-tab="active">
+                            <span class="tab-icon">⚔️</span>
+                            <span class="tab-text">Active Quests</span>
+                            <span class="quest-count">3</span>
+                        </button>
+                        <button class="quest-tab" data-tab="completed">
+                            <span class="tab-icon">✅</span>
+                            <span class="tab-text">Completed</span>
+                            <span class="quest-count">2</span>
+                        </button>
+                        <button class="quest-tab" data-tab="upcoming">
+                            <span class="tab-icon">🔮</span>
+                            <span class="tab-text">Upcoming</span>
+                            <span class="quest-count">2</span>
+                        </button>
+                    </div>
+
+                    <div class="quest-content">
+                        <div class="quest-list" id="quest-list">
+                            <!-- Active Quests -->
+                            <div class="quest-item active-quest" data-difficulty="epic">
+                                <div class="quest-header">
+                                    <span class="quest-icon">🚀</span>
+                                    <div class="quest-info">
+                                        <h4 class="quest-title">Portfolio Enhancement Saga</h4>
+                                        <div class="quest-meta">
+                                            <span class="difficulty epic">Epic Quest</span>
+                                            <span class="quest-date">Dec 2024</span>
+                                        </div>
+                                    </div>
+                                    <div class="quest-progress">
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 85%"></div>
+                                        </div>
+                                        <span class="progress-text">85%</span>
+                                    </div>
+                                </div>
+                                <div class="quest-description">
+                                    <p>Transform the portfolio with Wii-style interface, interactive elements, and modern animations. Added FAQ system, contact forms, and skill showcases.</p>
+                                    <div class="quest-rewards">
+                                        <span class="reward">+500 XP</span>
+                                        <span class="reward">🎨 UI Master Badge</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="quest-item active-quest" data-difficulty="rare">
+                                <div class="quest-header">
+                                    <span class="quest-icon">🔍</span>
+                                    <div class="quest-info">
+                                        <h4 class="quest-title">Search & Analytics Integration</h4>
+                                        <div class="quest-meta">
+                                            <span class="difficulty rare">Rare Quest</span>
+                                            <span class="quest-date">Jan 2025</span>
+                                        </div>
+                                    </div>
+                                    <div class="quest-progress">
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 40%"></div>
+                                        </div>
+                                        <span class="progress-text">40%</span>
+                                    </div>
+                                </div>
+                                <div class="quest-description">
+                                    <p>Implement advanced search functionality and analytics dashboard using Elastic Stack and Looker integration.</p>
+                                    <div class="quest-rewards">
+                                        <span class="reward">+300 XP</span>
+                                        <span class="reward">📊 Data Wizard Badge</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="quest-item active-quest" data-difficulty="common">
+                                <div class="quest-header">
+                                    <span class="quest-icon">📱</span>
+                                    <div class="quest-info">
+                                        <h4 class="quest-title">Mobile Optimization Quest</h4>
+                                        <div class="quest-meta">
+                                            <span class="difficulty common">Common Quest</span>
+                                            <span class="quest-date">Ongoing</span>
+                                        </div>
+                                    </div>
+                                    <div class="quest-progress">
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 70%"></div>
+                                        </div>
+                                        <span class="progress-text">70%</span>
+                                    </div>
+                                </div>
+                                <div class="quest-description">
+                                    <p>Optimize all components for mobile devices and improve touch interactions across the portfolio.</p>
+                                    <div class="quest-rewards">
+                                        <span class="reward">+150 XP</span>
+                                        <span class="reward">📱 Mobile Master Badge</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
                 </div>
             </div>
-            <div class="box">
-                <div class="services-provided">
-                    <h2>SERVICES</h2>
-                    <ul style="margin-right: 34px;">
-                        <li>
-                            PickleBall Coaching 🥒   
-                        </li>
-                        <li>
-                            Tennis Coaching 🎾   
-                        </li>
-                        <li>
-                            Tutoring 🏫    
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="box">
-                <div class="services-provided">
-                    <h2>RECS</h2>
-                    <ul style="margin-right: 34px;">
-                        <li>
-                            <a href="https://letterboxd.com/LoafusCrumbwell/" target="_blank" style="text-decoration: none; color: inherit;">
-                                Letterboxd 🎥 
-                            </a>  
-                        </li>
-                        <li>
-                            <a href="https://www.goodreads.com/user/show/185745197-hank" target="_blank" style="text-decoration: none; color: inherit;">
-                                Goodreads 📚 
-                            </a>     
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="box-borderless">
-                <img id="clickableImage" src="images/aliencreature.png" alt="Click Me">
-                <div class="counter-container">Click The Creature: <span id="counter">0</span></p>
+            <div class="tv-name">
+                <h3 class="clickable hoverable" onclick="showPage('page-landing')">BKWEBER.COM</h3>
             </div>
         </div>
+        <footer>© 2025 Brandon Weber</footer>
     </div>
-    <script src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
-    <script src="page_script.js" defer></script>
-    <script src="pong.js"></script>
-    <audio id="clickSound" src="sounds/yippee-short.mp3"></audio>
-    <script src="yippeecounter.js"></script>
-
+    <audio id="click-sound" src="assets/sounds/wii-click.mp3" preload="auto"></audio>
+    <audio id="hover-sound" src="assets/sounds/wii-hover.mp3" preload="auto"></audio>
+    <script src="js/script.js"></script>
 </body>
-
 </html>
