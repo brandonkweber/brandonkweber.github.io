@@ -22,7 +22,7 @@ function showPage(pageId) {
       // Show side menu with active page
       tvContainer.classList.add('has-active-page');
       // Also show landing page as side menu
-      document.getElementById('page-landing').classList.add('active');
+      // document.getElementById('page-landing').classList.add('active');
     }
   }
 }
@@ -46,7 +46,7 @@ const channelEnterSound = document.getElementById('channel-enter-sound');
 document.querySelectorAll('.clickable').forEach(el => {
   el.addEventListener('click', () => {
     clickSound.currentTime = 0;
-    clickSound.volume = 0.5;
+    clickSound.volume = 0.25;
     clickSound.play();
   });
 });
@@ -55,17 +55,18 @@ document.querySelectorAll('.homeable').forEach(el => {
   el.addEventListener('click', () => {
     setTimeout(() => {
       homeSound.currentTime = 0;
-      homeSound.volume = 1;
+      homeSound.volume = 0.1;
       homeSound.play();
     }, 400);
   });
 });
 
+
 document.querySelectorAll('.channelenterable').forEach(el => {
   el.addEventListener('click', () => {
     setTimeout(() => {
       channelEnterSound.currentTime = 0;
-      channelEnterSound.volume = 1;
+      channelEnterSound.volume = 0.25;
       channelEnterSound.play();
     }, 100);
   });
@@ -79,15 +80,10 @@ document.querySelectorAll('.clickable').forEach(el => {
   });
 });
 
-
-
 /* TODO: Clean this up */
 const aboutMenuBtn = document.getElementById("option-about");
 aboutMenuBtn.addEventListener("click", () => {
   showPage("page-info");
-  setTimeout(() => {
-    animateSkillsList();
-  }, 300);
 });
 const workMenuBtn = document.getElementById("option-work");
 workMenuBtn.addEventListener("click", () => showPage("page-work"));
@@ -352,7 +348,7 @@ function switchQuestTab(tabName) {
 }
 
 // Add click listeners to skill items and quest tabs
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const skillItems = document.querySelectorAll('.skill-item');
   skillItems.forEach(skill => {
     skill.addEventListener('click', () => handleSkillClick(skill));
@@ -424,24 +420,11 @@ function toggleFAQ(questionElement) {
 }
 
 // Add event listener when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const contactForm = document.getElementById('contactForm');
   if (contactForm) {
     contactForm.addEventListener('submit', handleContactForm);
   }
-});
-
-/* Keyboard Navigation for Photo Slideshow */
-document.addEventListener('DOMContentLoaded', function() {
-  const indicators = document.querySelectorAll('.indicator');
-  indicators.forEach((indicator, index) => {
-    indicator.addEventListener('keydown', function(e) {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        currentPhotoSlide(index + 1);
-      }
-    });
-  });
 });
 
 showPage('page-landing');
@@ -462,62 +445,14 @@ window.addEventListener('resize', () => {
   }
 });
 
-//Changelog
-  let memos = [];
-  let currentCategory = "active";
+// Button handling
+document.getElementById("btn-active").onclick = () => switchCategory("active", "btn-active");
+document.getElementById("btn-future").onclick = () => switchCategory("future", "btn-future");
+document.getElementById("btn-completed").onclick = () => switchCategory("completed", "btn-completed");
 
-  // Load memos from JSON file
-  async function loadMemos() {
-    try {
-      const response = await fetch("memos/memos.json");
-      memos = await response.json();
-      displayMemos();
-    } catch (error) {
-      console.error("Error loading memos:", error);
-    }
-  }
-
-  // Display memos in the list
-  function displayMemos() {
-    const memoList = document.getElementById("memo-list");
-    memoList.innerHTML = "";
-
-    const filteredMemos = memos.filter(memo => memo.category === currentCategory);
-
-    if (filteredMemos.length === 0) {
-      memoList.innerHTML = "<p>No memos found.</p>";
-      return;
-    }
-
-    filteredMemos.forEach(memo => {
-      const div = document.createElement("div");
-      div.classList.add("memo-item");
-      div.textContent = memo.title;
-      div.onclick = () => showMemo(memo);
-      memoList.appendChild(div);
-    });
-  }
-
-  // Show a memo's content
-  function showMemo(memo) {
-    const memoContent = document.getElementById("memo-content");
-    memoContent.innerHTML = `
-      <h2>${memo.title}</h2>
-      <p>${memo.content}</p>
-    `;
-  }
-
-  // Button handling
-  document.getElementById("btn-active").onclick = () => switchCategory("active", "btn-active");
-  document.getElementById("btn-future").onclick = () => switchCategory("future", "btn-future");
-  document.getElementById("btn-completed").onclick = () => switchCategory("completed", "btn-completed");
-
-  function switchCategory(category, btnId) {
-    currentCategory = category;
-    document.querySelectorAll(".changelog-buttons button").forEach(btn => btn.classList.remove("active"));
-    document.getElementById(btnId).classList.add("active");
-    displayMemos();
-  }
-
-  // Initial load
-  loadMemos();
+function switchCategory(category, btnId) {
+  currentCategory = category;
+  document.querySelectorAll(".changelog-buttons button").forEach(btn => btn.classList.remove("active"));
+  document.getElementById(btnId).classList.add("active");
+  displayMemos();
+}

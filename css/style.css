@@ -2490,7 +2490,7 @@ h5 {
     border-radius: 0;
     padding: 0;
     position: fixed;
-    overflow: hidden;
+    overflow-y: auto;
   }
 
   /* Phone screen styling - simulate phone dimensions */
@@ -2503,7 +2503,7 @@ h5 {
     background: linear-gradient(135deg, #3494E6, #EC6EAD);
     border-radius: 0;
     position: relative;
-    overflow: hidden;
+    overflow-y: auto;
   }
 
   .tv-screen {
@@ -2521,6 +2521,7 @@ h5 {
     justify-content: flex-start;
     display: flex;
     flex-direction: column;
+    overflow-y: auto;
   }
 
   /* Mobile Landing Page - Phone Layout */
@@ -2737,6 +2738,7 @@ h5 {
     height: 100%;
     display: flex;
     align-items: center;
+    padding: 0;
   }
 
   .marquee__inner {
@@ -2766,6 +2768,7 @@ h5 {
   /* Adjust content padding */
   #page-landing {
     padding-top: 30px !important;
+    padding-bottom: 70px !important;
   }
 
   /* Mobile Side Menu System */
@@ -2842,7 +2845,7 @@ h5 {
   .tv-container.has-active-page #bottom-menu {
     flex-direction: column;
     gap: 8px;
-    padding-top: 10px;
+    padding: 10px 0px 0px 0px;
   }
 
   .tv-container.has-active-page .menu-circle {
@@ -3311,5 +3314,13 @@ h5 {
 
   .carpet {
     height: 50%;
+  }
+
+  body:has(#page-landing.active) footer {
+    display: block;
+  }
+
+  footer {
+    display: none;
   }
 }
