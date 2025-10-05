@@ -9,6 +9,22 @@ function showPage(pageId) {
   if (page) {
     page.classList.add('active');
   }
+
+  // Handle mobile side menu
+  const tvContainer = document.querySelector('.tv-container');
+  const isMobile = window.innerWidth <= 768;
+
+  if (isMobile) {
+    if (pageId === 'page-landing') {
+      // Show full landing page
+      tvContainer.classList.remove('has-active-page');
+    } else {
+      // Show side menu with active page
+      tvContainer.classList.add('has-active-page');
+      // Also show landing page as side menu
+      document.getElementById('page-landing').classList.add('active');
+    }
+  }
 }
 
 const backBtnNodes = document.querySelectorAll('.back-button').forEach(el => {
@@ -407,6 +423,22 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 showPage('page-landing');
+
+// Handle window resize for mobile/desktop switching
+window.addEventListener('resize', () => {
+  const tvContainer = document.querySelector('.tv-container');
+  const isMobile = window.innerWidth <= 768;
+  const activePage = document.querySelector('.tv-screen.active:not(#page-landing)');
+
+  if (!isMobile) {
+    // Desktop mode - remove mobile side menu
+    tvContainer.classList.remove('has-active-page');
+  } else if (activePage) {
+    // Mobile mode with active page - ensure side menu is shown
+    tvContainer.classList.add('has-active-page');
+    document.getElementById('page-landing').classList.add('active');
+  }
+});
 
 //Changelog
   let memos = [];
