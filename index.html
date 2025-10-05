@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brandon's Room</title>
     <link rel="stylesheet" href="css/style.css">
-</script>
+    </script>
 </head>
+
 <body>
     <div class="page-container">
         <div class="background-container">
@@ -17,28 +19,28 @@
                 <div class="tv-screen" id="page-landing">
                     <div id="main-menu">
                         <div class="main-menu-options">
-                            <div class="menu-item menu-box clickable hoverable" id="option-about">
+                            <div class="menu-item menu-box clickable hoverable channelenterable" id="option-about">
                                 <div class="menu-icon">
                                     <img src="assets/icons/id-card.png" alt="About icon">
                                 </div>
                                 <h5>About</h5>
                                 <p class="menu-subtitle">Get to know me</p>
                             </div>
-                            <div class="menu-item menu-box clickable hoverable" id="option-work">
+                            <div class="menu-item menu-box clickable hoverable channelenterable" id="option-work">
                                 <div class="menu-icon">
                                     <img src="assets/icons/portfolio.png" alt="Work icon">
                                 </div>
                                 <h5>Work</h5>
                                 <p class="menu-subtitle">Projects & Skills</p>
                             </div>
-                            <div class="menu-item menu-box clickable hoverable" id="option-links">
+                            <div class="menu-item menu-box clickable hoverable channelenterable" id="option-links">
                                 <div class="menu-icon">
                                     <img src="assets/icons/link.png" alt="Links icon">
                                 </div>
                                 <h5>Links</h5>
                                 <p class="menu-subtitle">Social Media</p>
                             </div>
-                            <div class="menu-item menu-box clickable hoverable" id="option-faq">
+                            <div class="menu-item menu-box clickable hoverable channelenterable" id="option-faq">
                                 <div class="menu-icon">
                                     <img src="assets/icons/faq.png" alt="FAQ icon">
                                 </div>
@@ -50,7 +52,9 @@
                         <div class="profile-pic-block">
                             <div class="profile-container">
                                 <div class="profile-image-wrapper">
-                                    <img class="profile-image clickable hoverable" onclick="showPage('page-landing')" src="assets/images/ProfilePicCropped.jpg" alt="Brandon Weber">
+                                    <img class="profile-image hoverable clickable homeable"
+                                        onclick="showPage('page-landing')" src="assets/images/ProfilePicCropped.jpg"
+                                        alt="Brandon Weber">
                                     <div class="profile-ring"></div>
                                     <div class="profile-status">
                                         <span class="status-dot"></span>
@@ -68,39 +72,45 @@
                         <div class="menu-item scroll-news-container">
                             <div class="marquee">
                                 <div class="marquee__inner">
-                                    <span>Howdy! I'm Brandon Weber, and I probably just told you to stop by here...</span>
-                                    <span>  Howdy! I'm Brandon Weber, and I probably just told you to stop by here...</span>
+                                    <span>Howdy! I'm Brandon Weber, and I probably just told you to stop by
+                                        here...</span>
+                                    <span> Howdy! I'm Brandon Weber, and I probably just told you to stop by
+                                        here...</span>
                                 </div>
-                           </div>
+                            </div>
                         </div>
-                        <div class="menu-item menu-circle clickable hoverable" id="option-contact">
+                        <div class="menu-item menu-circle clickable hoverable channelenterable" id="option-contact">
                             <div class="menu-icon">
                                 <img src="assets/icons/email.png" alt="Contact icon">
                             </div>
                             <h5>Contact</h5>
                             <p class="menu-subtitle">Get In Touch</p>
                         </div>
-                        <div class="menu-item menu-circle clickable hoverable" id="option-changelog">
+                        <div class="menu-item menu-circle clickable hoverable channelenterable" id="option-changelog">
                             <div class="menu-icon">
                                 <img src="assets/icons/file.png" alt="Changelog icon">
                             </div>
                             <h5>Changelog</h5>
-                            <p class="menu-subtitle">Updates & News</p>
+                            <p class="menu-subtitle">Recent Updates</p>
                         </div>
                     </div>
                 </div>
                 <div class="tv-screen" id="page-info" role="main" aria-label="About Brandon Weber">
                     <div id="info-left-column">
-                        <div class="about-profile-circle-slideshow menu-item" role="img" aria-label="Brandon Weber profile photos slideshow">
+                        <div class="about-profile-circle-slideshow menu-item" role="img"
+                            aria-label="Brandon Weber profile photos slideshow">
                             <img src="assets/images/ProfilePicCropped.jpg" alt="Brandon Weber professional headshot">
                             <img src="assets/images/90sGuyCropped.jpg" alt="Brandon Weber in 90s style casual photo">
+                            <img src="assets/images/restaurantbrandoncropped.jpg" alt="Brandon Weber in da restaurant">
                             <img src="assets/images/poolbrandoncropped.jpg" alt="Brandon Weber in da pool">
+
                         </div>
                         <h4>Brandon Weber</h4>
                         <p>Professional Software Developer</p>
                         <div class="company-info">
-                            <p>Currently Work at:</p>
-                            <a href="https://quarterhill.com" target="_blank" rel="noopener noreferrer" class="company-link">
+                            <p>I'm Currently Working At:</p>
+                            <a href="https://quarterhill.com" target="_blank" rel="noopener noreferrer"
+                                class="company-link">
                                 <span class="company-name">Quarterhill</span>
                                 <span class="external-link-icon">🔗</span>
                             </a>
@@ -109,8 +119,11 @@
                     <div id="info-right-column">
                         <div id="info-text-block">
                             <div class="about-section">
-                                <p class="intro-text">Howdy! I’m Brandon K. Weber. I started this website to teach myself front end web development. Check out this site to see everything I’m up to.</p>
-                                <p class="contact-text">Interested in working with me? Send me an email at <a href="mailto:brandon@bkweber.com">brandon@bkweber.com</a></p>
+                                <p class="intro-text">Howdy! I’m Brandon K. Weber. I started this website to teach
+                                    myself front end web development. Check out this site to see everything I’m up to.
+                                </p>
+                                <p class="contact-text">Interested in working with me? Send me an email at <a
+                                        href="mailto:brandon@bkweber.com">brandon@bkweber.com</a></p>
                             </div>
 
                             <div class="about-section">
@@ -318,17 +331,23 @@
                             <div class="projects-container">
                                 <div class="project-item">
                                     <div class="project-image">
-                                        <img src="assets/images/project-portfolio.jpg" alt="Portfolio Website" onerror="this.src='assets/images/90sGuyCropped.jpg'">
+                                        <img src="assets/images/project-portfolio.jpg" alt="Portfolio Website"
+                                            onerror="this.src='assets/images/90sGuyCropped.jpg'">
                                     </div>
                                     <div class="project-content">
-                                        <h4>Personal Portfolio Website</h4>
-                                        <p>A retro Nintendo Wii-themed portfolio website built with HTML, CSS, and JavaScript. Features responsive design, interactive animations, and a unique gaming aesthetic.</p>
+                                        <h4>This Personal Portfolio Website</h4>
+                                        <p>A retro Nintendo Wii inspiredportfolio website built with HTML, CSS, and
+                                            JavaScript. Features responsive design, interactive animations, and a unique
+                                            gaming aesthetic. It will always be a work in progress! Send me a message if
+                                            you have ideas for new features!</p>
                                         <div class="project-buttons">
-                                            <a href="https://github.com/brandonkweber/brandonkweber.github.io" target="_blank" class="project-btn repo-btn">
+                                            <a href="https://github.com/brandonkweber/brandonkweber.github.io"
+                                                target="_blank" class="project-btn repo-btn">
                                                 <span class="btn-icon">📂</span>
                                                 <span class="btn-text">Repository</span>
                                             </a>
-                                            <a href="#" class="project-btn article-btn" onclick="alert('Medium article coming soon!')">
+                                            <a href="#" class="project-btn article-btn"
+                                                onclick="alert('Medium article coming soon!')">
                                                 <span class="btn-icon">📝</span>
                                                 <span class="btn-text">Article</span>
                                             </a>
@@ -338,17 +357,23 @@
 
                                 <div class="project-item">
                                     <div class="project-image">
-                                        <img src="assets/images/project-ecommerce.jpg" alt="E-commerce Platform" onerror="this.src='assets/images/90sGuyCropped.jpg'">
+                                        <img src="assets/images/project-ecommerce.jpg" alt="E-commerce Platform"
+                                            onerror="this.src='assets/images/90sGuyCropped.jpg'">
                                     </div>
                                     <div class="project-content">
-                                        <h4>E-commerce Platform</h4>
-                                        <p>Full-stack e-commerce solution built with Spring Boot backend and React frontend. Features user authentication, payment processing, and inventory management.</p>
+                                        <h4>BLUPR Leaderboard</h4>
+                                        <p>A helpful pickleball tournament tool and leaderboard. Full-stack web
+                                            application built with Spring Boot backend and React frontend. Features user
+                                            authentication, matchmaking, and tournament management. This is something I
+                                            hope to use often with my pickleball community!</p>
                                         <div class="project-buttons">
-                                            <a href="#" class="project-btn repo-btn" onclick="alert('Repository link coming soon!')">
+                                            <a href="#" class="project-btn repo-btn"
+                                                onclick="alert('Repository link coming soon!')">
                                                 <span class="btn-icon">📂</span>
                                                 <span class="btn-text">Repository</span>
                                             </a>
-                                            <a href="#" class="project-btn article-btn" onclick="alert('Medium article coming soon!')">
+                                            <a href="#" class="project-btn article-btn"
+                                                onclick="alert('Medium article coming soon!')">
                                                 <span class="btn-icon">📝</span>
                                                 <span class="btn-text">Article</span>
                                             </a>
@@ -358,17 +383,22 @@
 
                                 <div class="project-item">
                                     <div class="project-image">
-                                        <img src="assets/images/project-analytics.jpg" alt="Data Analytics Dashboard" onerror="this.src='assets/images/90sGuyCropped.jpg'">
+                                        <img src="assets/images/project-analytics.jpg" alt="Data Analytics Dashboard"
+                                            onerror="this.src='assets/images/90sGuyCropped.jpg'">
                                     </div>
                                     <div class="project-content">
-                                        <h4>Data Analytics Dashboard</h4>
-                                        <p>Interactive dashboard for data visualization using Python, Elastic Search, and Looker. Processes large datasets and provides real-time insights for business intelligence.</p>
+                                        <h4>Yilong Ma - Ye Long Road- Coming Soon!</h4>
+                                        <p>Help world renowned e-celeb Yilong Ma collect money and reach his South
+                                            African counterpart. This web based infinite scrolling game is built with
+                                            Three.JS that you can play in your browser and against your friends.</p>
                                         <div class="project-buttons">
-                                            <a href="#" class="project-btn repo-btn" onclick="alert('Repository link coming soon!')">
+                                            <a href="#" class="project-btn repo-btn"
+                                                onclick="alert('Repository link coming soon!')">
                                                 <span class="btn-icon">📂</span>
                                                 <span class="btn-text">Repository</span>
                                             </a>
-                                            <a href="#" class="project-btn article-btn" onclick="alert('Medium article coming soon!')">
+                                            <a href="#" class="project-btn article-btn"
+                                                onclick="alert('Medium article coming soon!')">
                                                 <span class="btn-icon">📝</span>
                                                 <span class="btn-text">Article</span>
                                             </a>
@@ -389,7 +419,9 @@
                                     </div>
                                     <div class="experience-company">Tech Solutions Inc.</div>
                                     <div class="experience-description">
-                                        <p>Lead development of enterprise-scale web applications using Java Spring Boot and React. Managed a team of 4 developers and implemented CI/CD pipelines that reduced deployment time by 60%.</p>
+                                        <p>Lead development of enterprise-scale web applications using Java Spring Boot
+                                            and React. Managed a team of 4 developers and implemented CI/CD pipelines
+                                            that reduced deployment time by 60%.</p>
                                         <ul>
                                             <li>Architected microservices handling 1M+ daily requests</li>
                                             <li>Implemented automated testing reducing bugs by 40%</li>
@@ -405,7 +437,9 @@
                                     </div>
                                     <div class="experience-company">Digital Innovations LLC</div>
                                     <div class="experience-description">
-                                        <p>Developed and maintained multiple client-facing applications using modern web technologies. Collaborated with UX/UI designers to create responsive and accessible user interfaces.</p>
+                                        <p>Developed and maintained multiple client-facing applications using modern web
+                                            technologies. Collaborated with UX/UI designers to create responsive and
+                                            accessible user interfaces.</p>
                                         <ul>
                                             <li>Built 15+ responsive web applications</li>
                                             <li>Integrated third-party APIs and payment systems</li>
@@ -421,7 +455,9 @@
                                     </div>
                                     <div class="experience-company">StartupTech Co.</div>
                                     <div class="experience-description">
-                                        <p>Started career developing internal tools and customer-facing features. Gained experience in agile development methodologies and modern software engineering practices.</p>
+                                        <p>Started career developing internal tools and customer-facing features. Gained
+                                            experience in agile development methodologies and modern software
+                                            engineering practices.</p>
                                         <ul>
                                             <li>Contributed to 20+ feature releases</li>
                                             <li>Participated in daily standups and sprint planning</li>
@@ -548,7 +584,9 @@
                                 <span class="expand-icon">▶</span>
                             </div>
                             <div class="faq-answer">
-                                <p>The Nintendo Wii represents a time of innovation and fun in gaming! I wanted my portfolio to capture that same spirit of creativity and nostalgia. Plus, who doesn't love the satisfying click sounds and smooth animations of the Wii menu?</p>
+                                <p>The Nintendo Wii represents a time of innovation and fun in gaming! I wanted my
+                                    portfolio to capture that same spirit of creativity and nostalgia. Plus, who doesn't
+                                    love the satisfying click sounds and smooth animations of the Wii menu?</p>
                             </div>
                         </div>
 
@@ -560,8 +598,10 @@
                             <div class="faq-answer">
                                 <p><strong>Tech Stack:</strong></p>
                                 <ul>
-                                    <li>🌐 <strong>Frontend:</strong> Pure HTML, CSS, and JavaScript (no frameworks!)</li>
-                                    <li>🎨 <strong>Styling:</strong> Custom CSS with animations and glassmorphism effects</li>
+                                    <li>🌐 <strong>Frontend:</strong> Pure HTML, CSS, and JavaScript (no frameworks!)
+                                    </li>
+                                    <li>🎨 <strong>Styling:</strong> Custom CSS with animations and glassmorphism
+                                        effects</li>
                                     <li>🚀 <strong>Deployment:</strong> GitHub Pages for free hosting</li>
                                     <li>🎵 <strong>Audio:</strong> Original Wii sound effects for authenticity</li>
                                 </ul>
@@ -591,7 +631,10 @@
                                 <span class="expand-icon">▶</span>
                             </div>
                             <div class="faq-answer">
-                                <p>Absolutely! Gaming has been a huge part of my life and actually inspired me to get into programming. I love everything from retro Nintendo classics to modern indie games. The problem-solving skills from gaming translate perfectly to software development!</p>
+                                <p>Absolutely! Gaming has been a huge part of my life and actually inspired me to get
+                                    into programming. I love everything from retro Nintendo classics to modern indie
+                                    games. The problem-solving skills from gaming translate perfectly to software
+                                    development!</p>
                             </div>
                         </div>
 
@@ -617,7 +660,10 @@
                                 <span class="expand-icon">▶</span>
                             </div>
                             <div class="faq-answer">
-                                <p>I'm always open to discussing exciting opportunities! Whether it's a full-time position, consulting work, or an interesting project collaboration, feel free to reach out. I'm particularly interested in roles involving backend development, cloud architecture, and innovative tech solutions.</p>
+                                <p>I'm always open to discussing exciting opportunities! Whether it's a full-time
+                                    position, consulting work, or an interesting project collaboration, feel free to
+                                    reach out. I'm particularly interested in roles involving backend development, cloud
+                                    architecture, and innovative tech solutions.</p>
                             </div>
                         </div>
                     </div>
@@ -634,12 +680,14 @@
                         <form class="contact-form" id="contactForm">
                             <div class="form-group">
                                 <label for="subject">Subject:</label>
-                                <input type="text" id="subject" name="subject" placeholder="What's this about?" required>
+                                <input type="text" id="subject" name="subject" placeholder="What's this about?"
+                                    required>
                             </div>
 
                             <div class="form-group">
                                 <label for="body">Message:</label>
-                                <textarea id="body" name="body" rows="8" placeholder="Tell me what's on your mind..." required></textarea>
+                                <textarea id="body" name="body" rows="8" placeholder="Tell me what's on your mind..."
+                                    required></textarea>
                             </div>
 
                             <div class="form-actions">
@@ -713,7 +761,8 @@
                                     </div>
                                 </div>
                                 <div class="quest-description">
-                                    <p>Transform the portfolio with Wii-style interface, interactive elements, and modern animations. Added FAQ system, contact forms, and skill showcases.</p>
+                                    <p>Transform the portfolio with Wii-style interface, interactive elements, and
+                                        modern animations. Added FAQ system, contact forms, and skill showcases.</p>
                                     <div class="quest-rewards">
                                         <span class="reward">+500 XP</span>
                                         <span class="reward">🎨 UI Master Badge</span>
@@ -739,7 +788,8 @@
                                     </div>
                                 </div>
                                 <div class="quest-description">
-                                    <p>Implement advanced search functionality and analytics dashboard using Elastic Stack and Looker integration.</p>
+                                    <p>Implement advanced search functionality and analytics dashboard using Elastic
+                                        Stack and Looker integration.</p>
                                     <div class="quest-rewards">
                                         <span class="reward">+300 XP</span>
                                         <span class="reward">📊 Data Wizard Badge</span>
@@ -765,7 +815,8 @@
                                     </div>
                                 </div>
                                 <div class="quest-description">
-                                    <p>Optimize all components for mobile devices and improve touch interactions across the portfolio.</p>
+                                    <p>Optimize all components for mobile devices and improve touch interactions across
+                                        the portfolio.</p>
                                     <div class="quest-rewards">
                                         <span class="reward">+150 XP</span>
                                         <span class="reward">📱 Mobile Master Badge</span>
@@ -779,13 +830,16 @@
                 </div>
             </div>
             <div class="tv-name">
-                <h3 class="clickable hoverable" onclick="showPage('page-landing')">BKWEBER.COM</h3>
+                <h3 class="hoverable clickable homeable" onclick="showPage('page-landing')">BKWEBER.COM</h3>
             </div>
         </div>
         <footer>© 2025 Brandon Weber</footer>
     </div>
     <audio id="click-sound" src="assets/sounds/wii-click.mp3" preload="auto"></audio>
     <audio id="hover-sound" src="assets/sounds/wii-hover.mp3" preload="auto"></audio>
+    <audio id="home-sound" src="assets/sounds/wii-home.mp3" preload="auto"></audio>
+    <audio id="channel-enter-sound" src="assets/sounds/wii-channel-enter.mp3" preload="auto"></audio>
     <script src="js/script.js"></script>
 </body>
+
 </html>

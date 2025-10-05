@@ -40,12 +40,34 @@ document.querySelectorAll('.collapse-box').forEach(box => {
 
 /* Sounds */
 const clickSound = document.getElementById('click-sound');
+const homeSound = document.getElementById('home-sound');
 const hoverSound = document.getElementById('hover-sound');
+const channelEnterSound = document.getElementById('channel-enter-sound');
 document.querySelectorAll('.clickable').forEach(el => {
   el.addEventListener('click', () => {
     clickSound.currentTime = 0;
     clickSound.volume = 0.5;
     clickSound.play();
+  });
+});
+
+document.querySelectorAll('.homeable').forEach(el => {
+  el.addEventListener('click', () => {
+    setTimeout(() => {
+      homeSound.currentTime = 0;
+      homeSound.volume = 1;
+      homeSound.play();
+    }, 400);
+  });
+});
+
+document.querySelectorAll('.channelenterable').forEach(el => {
+  el.addEventListener('click', () => {
+    setTimeout(() => {
+      channelEnterSound.currentTime = 0;
+      channelEnterSound.volume = 1;
+      channelEnterSound.play();
+    }, 100);
   });
 });
 
@@ -57,7 +79,7 @@ document.querySelectorAll('.clickable').forEach(el => {
   });
 });
 
-/* Pokédex-style tsparticles configuration *
+
 
 /* TODO: Clean this up */
 const aboutMenuBtn = document.getElementById("option-about");
