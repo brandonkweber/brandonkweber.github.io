@@ -232,26 +232,26 @@ const questData = {
       icon: "🚀",
       title: "Portfolio Enhancement Saga",
       difficulty: "epic",
-      date: "Dec 2024",
-      progress: 85,
-      description: "Transform the portfolio with Wii-style interface, interactive elements, and modern animations. Added FAQ system, contact forms, and skill showcases.",
+      date: "Ongoing",
+      progress: 95,
+      description: "Transform the portfolio with Wii-style interface, interactive elements, and modern animations. Added FAQ system, contact form, and this quest system (changenotes).",
       rewards: ["+500 XP", "🎨 UI Master Badge"]
     },
     {
       icon: "🔍",
-      title: "Search & Analytics Integration",
+      title: "Custom Background",
       difficulty: "rare",
-      date: "Jan 2025",
-      progress: 40,
-      description: "Implement advanced search functionality and analytics dashboard using Elastic Stack and Looker integration.",
-      rewards: ["+300 XP", "📊 Data Wizard Badge"]
+      date: "Ongoing",
+      progress: 20,
+      description: "Use program like After Effects to create custom background for each page like different channels on the Wii.",
+      rewards: ["+300 XP", "📊 Wii Channel Badge"]
     },
     {
       icon: "📱",
       title: "Mobile Optimization Quest",
       difficulty: "common",
       date: "Ongoing",
-      progress: 70,
+      progress: 80,
       description: "Optimize all components for mobile devices and improve touch interactions across the portfolio.",
       rewards: ["+150 XP", "📱 Mobile Master Badge"]
     }
@@ -261,16 +261,16 @@ const questData = {
       icon: "🎮",
       title: "Wii Interface Design",
       difficulty: "epic",
-      date: "Nov 2024",
+      date: "Oct 2025",
       progress: 100,
       description: "Successfully implemented retro Nintendo Wii-style interface with authentic animations and sound effects.",
-      rewards: ["+750 XP", "🎮 Retro Master Badge"]
+      rewards: ["+750 XP", "🎮 Nostalgia Badge"]
     },
     {
       icon: "🎨",
       title: "Interactive Animations",
       difficulty: "rare",
-      date: "Nov 2024",
+      date: "Oct 2025",
       progress: 100,
       description: "Added smooth CSS animations, hover effects, and interactive elements throughout the portfolio.",
       rewards: ["+400 XP", "✨ Animation Wizard Badge"]
@@ -279,21 +279,21 @@ const questData = {
   upcoming: [
     {
       icon: "🤖",
-      title: "AI Integration Quest",
+      title: "AI Familiar",
       difficulty: "legendary",
-      date: "Q2 2025",
+      date: "Q2 2026",
       progress: 0,
-      description: "Integrate AI-powered features like smart recommendations and automated content generation.",
-      rewards: ["+1000 XP", "🤖 AI Pioneer Badge"]
+      description: "Add an AI buddy to the portfolio to answer questions and provide information. Think of Clippy but with more Brandon.",
+      rewards: ["+1000 XP", "🤖 AI Guy Badge"]
     },
     {
       icon: "🌐",
-      title: "Multi-language Support",
-      difficulty: "rare",
-      date: "Q1 2025",
+      title: "Add Browser Game",
+      difficulty: "legendary",
+      date: "Q1 2026",
       progress: 0,
-      description: "Add internationalization support with multiple language options for global accessibility.",
-      rewards: ["+350 XP", "🌍 Global Citizen Badge"]
+      description: "Add browser game to the portfolio. If it's supposed to pay homage to the Wii era, this place should have a game or two.",
+      rewards: ["+350 XP", "🕹️ Game Dev Badge"]
     }
   ]
 };
