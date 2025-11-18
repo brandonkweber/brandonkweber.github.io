@@ -229,15 +229,6 @@ function handleSkillClick(skillItem) {
 const questData = {
   active: [
     {
-      icon: "🚀",
-      title: "Portfolio Enhancement Saga",
-      difficulty: "epic",
-      date: "Ongoing",
-      progress: 95,
-      description: "Transform the portfolio with Wii-style interface, interactive elements, and modern animations. Added FAQ system, contact form, and this quest system (changenotes).",
-      rewards: ["+500 XP", "🎨 UI Master Badge"]
-    },
-    {
       icon: "🔍",
       title: "Custom Background",
       difficulty: "rare",
@@ -257,6 +248,15 @@ const questData = {
     }
   ],
   completed: [
+    {
+      icon: "🚀",
+      title: "Portfolio Enhancement Saga",
+      difficulty: "epic",
+      date: "Ongoing",
+      progress: 95,
+      description: "Transform the portfolio with Wii-style interface, interactive elements, and modern animations. Added FAQ system, contact form, and this quest system (changenotes).",
+      rewards: ["+500 XP", "🎨 UI Master Badge"]
+    },
     {
       icon: "🎮",
       title: "Wii Interface Design",
