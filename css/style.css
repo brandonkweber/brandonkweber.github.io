@@ -643,6 +643,7 @@ html {
 }
 
 .work-blurb strong {
+  font-size: 16px;
   color: #ffd700;
 }
 
@@ -3055,7 +3056,7 @@ h5 {
   }
 
   .work-blurb p {
-    font-size: 12px;
+    font-size: 13px;
   }
 
   .resume-btn {
